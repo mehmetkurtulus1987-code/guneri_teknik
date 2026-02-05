@@ -17,28 +17,28 @@
             
             <div class="header-right">
                 <nav class="main-nav">
-                     <ul>
+                    <ul>
                         <li><a href="javascript:void(0)" onclick="toggleSection('hakkimizda')">Hakkımızda</a></li>
                         <li class="dropdown">
                             <a href="javascript:void(0)" class="dropbtn">Ürünlerimiz</a>
                             <div class="dropdown-content">
                                 <div class="sub-dropdown">
-                                    <a href="javascript:void(0)" class="sub-dropbtn">MAKTEK ▸</a>
+                                    <a href="javascript:void(0)" class="sub-dropbtn">MAKTEK <span class="arrow">▸</span></a>
                                     <div class="sub-dropdown-content">
                                         <a href="javascript:void(0)" onclick="toggleSection('markalar-bolumu')">Elektrikli Kombi</a>
                                         <a href="javascript:void(0)" onclick="toggleSection('markalar-bolumu')">Doğalgazlı Kombi</a>
                                         <a href="javascript:void(0)" onclick="toggleSection('markalar-bolumu')">Kömürlü Kazan</a>
+                                    </div>
                                 </div>
+                                <a href="javascript:void(0)" onclick="toggleSection('markalar-bolumu')">SANICA</a>
+                                <a href="javascript:void(0)" onclick="toggleSection('markalar-bolumu')">DİZAYN</a>
+                                <a href="javascript:void(0)" onclick="toggleSection('markalar-bolumu')">ARISTON</a>
+                                <a href="javascript:void(0)" onclick="toggleSection('markalar-bolumu')">HEXEL</a>
                             </div>
-                            <a href="javascript:void(0)" onclick="toggleSection('markalar-bolumu')">SANICA</a>
-                            <a href="javascript:void(0)" onclick="toggleSection('markalar-bolumu')">DİZAYN</a>
-                            <a href="javascript:void(0)" onclick="toggleSection('markalar-bolumu')">ARISTON</a>
-                            <a href="javascript:void(0)" onclick="toggleSection('markalar-bolumu')">HEXEL</a>
-                        </div>
-                    </li>
-                    <li><a href="#iletisim">İletişim</a></li>
-                 </ul>
-             </nav>
+                        </li>
+                        <li><a href="#iletisim">İletişim</a></li>
+                    </ul>
+                </nav>
                 <a href="tel:+905376183344" class="cta-header">📞 0537 618 33 44</a>
             </div>
         </div>
@@ -110,13 +110,11 @@
     <footer id="iletisim">
         <div class="container">
             <h3>İletişim</h3>
-            <p>Teknik Destek Hattı:</p>
-            <p>Hafta içi ve Cumartesi günleri 08:00 - 20:30 saatleri arasında ulaşabilirsiniz.<p>
-            <p>📬Adres: Esatpaşa Mahallesi, 1. Abdi İpekçi geçidi No:15, 35660 Menemen/İzmir</p>
-            <a href="https://tinyurl.com/guneriteknik" target="_blank" rel="noopener noreferrer" class="btn bot-btn">📍 Konum / Yol Tarifi 📍</a>
-            <p style="font-size: 1.8rem; font-weight: bold; margin: 15px 0; color: #f0610e;">0537 618 33 44</p>
+            <p>Hafta içi ve Cumartesi: 08:00 - 20:30</p>
+            <p>📬 Esatpaşa Mah. 1. Abdi İpekçi geçidi No:15, Menemen/İzmir</p>
+            <a href="https://tinyurl.com/guneriteknik" target="_blank" rel="noopener noreferrer" class="btn call" style="margin: 20px 0;">📍 Yol Tarifi Al</a>
+            <p style="font-size: 1.8rem; font-weight: bold; color: #f0610e;">0537 618 33 44</p>
             <p>Güneri Teknik - Menemen Kombi Servis Hizmetleri</p>
-            <small>Menemen • Foça • Aliağa • Yeni Şakran</small>
         </div>
     </footer>
 
@@ -124,10 +122,14 @@
     function toggleSection(sectionId) {
         var x = document.getElementById(sectionId);
         if (x.style.display === "none") {
-            // Diğer açık olanları kapat (isteğe bağlı, daha temiz bir görüntü sağlar)
             document.querySelectorAll('.toggle-section').forEach(sec => sec.style.display = 'none');
-            
             x.style.display = "block";
             x.scrollIntoView({ behavior: 'smooth' });
         } else {
-            x.style.display = "none
+            x.style.display = "none";
+        }
+    }
+    </script>
+
+</body>
+</html>
