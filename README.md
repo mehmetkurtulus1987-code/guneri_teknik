@@ -1,0 +1,1 @@
+# guneri_teknik
