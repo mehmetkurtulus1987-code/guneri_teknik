@@ -18,15 +18,15 @@
             <div class="header-right">
                 <nav class="main-nav">
                     <ul>
-                        <li><a href="javascript:void(0)" onclick="toggleAbout()">Hakkımızda</a></li>
+                        <li><a href="javascript:void(0)" onclick="toggleSection('hakkimizda')">Hakkımızda</a></li>
                         <li class="dropdown">
-                            <a href="#markalar" class="dropbtn">Markalar</a>
+                            <a href="javascript:void(0)" onclick="toggleSection('markalar-bolumu')" class="dropbtn">Markalar</a>
                             <div class="dropdown-content">
-                                <a href="#markalar">MAKTEK</a>
-                                <a href="#markalar">SANICA</a>
-                                <a href="#markalar">DİZAYN</a>
-                                <a href="#markalar">ARISTON</a>
-                                <a href="#markalar">HEXEL</a>
+                                <a href="javascript:void(0)" onclick="toggleSection('markalar-bolumu')">MAKTEK</a>
+                                <a href="javascript:void(0)" onclick="toggleSection('markalar-bolumu')">SANICA</a>
+                                <a href="javascript:void(0)" onclick="toggleSection('markalar-bolumu')">DİZAYN</a>
+                                <a href="javascript:void(0)" onclick="toggleSection('markalar-bolumu')">ARISTON</a>
+                                <a href="javascript:void(0)" onclick="toggleSection('markalar-bolumu')">HEXEL</a>
                             </div>
                         </li>
                         <li><a href="#iletisim">İletişim</a></li>
@@ -37,26 +37,15 @@
         </div>
     </header>
 
-    <section id="hakkimizda" class="about-section" style="display: none;">
+    <section id="hakkimizda" class="toggle-section" style="display: none;">
         <div class="container">
             <h3>Hakkımızda</h3>
             <p>Güneri Teknik olarak, İzmir'in kuzey aksında (Menemen, Aliağa, Foça) yılların verdiği tecrübe ile kombi arıza, onarım ve parça değişimi konularında hizmet veriyoruz. Müşteri memnuniyetini önceliğimiz yaparak, cihazlarınızdaki sorunları en kısa sürede ve garantili olarak çözüyoruz.</p>
-            <button onclick="toggleAbout()" class="close-btn">Kapat</button>
+            <button onclick="toggleSection('hakkimizda')" class="close-btn">Kapat</button>
         </div>
     </section>
 
-    <section class="hero">
-        <div class="container">
-            <h2>Kombiniz mi Arızalandı?</h2>
-            <p>Menemen, Aliağa ve Foça bölgesinde <b>Maktek, Sanica, Dizayn, Ariston ve Hexel</b> marka kombileriniz için hızlı servis.</p>
-            <div class="action-buttons">
-                <a href="https://wa.me/905376183344?text=Merhaba,%20kombi%20arızası%20için%20destek%20istiyorum." target="_blank" rel="noopener noreferrer" class="btn whatsapp">WhatsApp Destek</a>
-                <a href="tel:+905376183344" class="btn call">Şimdi Ara</a>
-            </div>
-        </div>
-    </section>
-
-    <section id="markalar" class="brands">
+    <section id="markalar-bolumu" class="toggle-section brands-bg" style="display: none;">
         <div class="container">
             <h3>Uzmanlık Alanımız Olan Markalar</h3>
             <div class="brand-list">
@@ -65,6 +54,18 @@
                 <span>DİZAYN</span>
                 <span>ARISTON</span>
                 <span>HEXEL</span>
+            </div>
+            <button onclick="toggleSection('markalar-bolumu')" class="close-btn">Kapat</button>
+        </div>
+    </section>
+
+    <section class="hero">
+        <div class="container">
+            <h2>Kombiniz mi Arızalandı?</h2>
+            <p>Menemen, Aliağa ve Foça bölgesinde profesyonel kombi arıza ve teknik servis hizmetleri.</p>
+            <div class="action-buttons">
+                <a href="https://wa.me/905376183344?text=Merhaba,%20kombi%20arızası%20için%20destek%20istiyorum." target="_blank" rel="noopener noreferrer" class="btn whatsapp">WhatsApp Destek</a>
+                <a href="tel:+905376183344" class="btn call">Şimdi Ara</a>
             </div>
         </div>
     </section>
@@ -79,12 +80,12 @@
             <div class="service-card">
                 <div class="icon">⚙️</div>
                 <h3>Yedek Parça</h3>
-                <p>Ariston, Maktek ve diğer markalar için uygun ve garantili parça desteği.</p>
+                <p>Ariston, Maktek ve diğer markalar için orijinal parça desteği.</p>
             </div>
             <div class="service-card">
                 <div class="icon">📍</div>
                 <h3>Geniş Hizmet Ağı</h3>
-                <p>Harmandalı'dan Dikili sınırına kadar tüm bölgelere servis aracımızla geliyoruz.</p>
+                <p>Harmandalı'dan Dikili sınırına kadar servis aracımızla kapınızdayız.</p>
             </div>
         </div>
     </section>
@@ -102,24 +103,21 @@
     <footer id="iletisim">
         <div class="container">
             <h3>İletişim</h3>
-            <p>Bize 7/24 ulaşabilirsiniz:</p>
-            <p style="font-size: 1.5rem; font-weight: bold; margin: 10px 0;">📞 0537 618 33 44</p>
+            <p>7/24 Teknik Destek Hattı:</p>
+            <p style="font-size: 1.8rem; font-weight: bold; margin: 15px 0; color: #f0610e;">0537 618 33 44</p>
             <p>Güneri Teknik - İzmir Kombi Servis Hizmetleri</p>
             <small>Menemen • Foça • Aliağa • Yeni Şakran</small>
         </div>
     </footer>
 
     <script>
-    function toggleAbout() {
-        var x = document.getElementById("hakkimizda");
+    function toggleSection(sectionId) {
+        var x = document.getElementById(sectionId);
         if (x.style.display === "none") {
+            // Diğer açık olanları kapat (isteğe bağlı, daha temiz bir görüntü sağlar)
+            document.querySelectorAll('.toggle-section').forEach(sec => sec.style.display = 'none');
+            
             x.style.display = "block";
             x.scrollIntoView({ behavior: 'smooth' });
         } else {
-            x.style.display = "none";
-        }
-    }
-    </script>
-
-</body>
-</html>
+            x.style.display = "none
