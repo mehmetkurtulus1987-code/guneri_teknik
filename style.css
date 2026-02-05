@@ -1,55 +1,212 @@
-/* --- GENEL --- */
-* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; scroll-behavior: smooth; }
-body { background: #f8f9fa; color: #333; line-height: 1.6; }
-.container { width: 90%; max-width: 1200px; margin: auto; }
+/* --- GENEL AYARLAR --- */
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+    font-family: 'Poppins', sans-serif; 
+    scroll-behavior: smooth; 
+}
 
-/* --- HEADER & NAV --- */
-header { background: #1a2a6c; color: white; padding: 15px 0; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-.header-flex { display: flex; justify-content: space-between; align-items: center; }
+body { 
+    background: #f8f9fa; 
+    color: #333; 
+    line-height: 1.6; 
+}
+
+.container { 
+    width: 90%; 
+    max-width: 1200px; 
+    margin: auto; 
+}
+
+/* --- HEADER & NAVİGASYON --- */
+header { 
+    background: #1a2a6c; 
+    color: white; 
+    padding: 15px 0; 
+    position: sticky; 
+    top: 0; 
+    z-index: 1000; 
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1); 
+}
+
+.header-flex { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+}
+
 header .logo h1 { font-size: 24px; }
 header .logo span { color: #f0610e; }
-.header-right { display: flex; align-items: center; gap: 30px; }
-.main-nav ul { list-style: none; display: flex; gap: 20px; }
-.main-nav a { text-decoration: none; color: white; font-weight: 600; font-size: 0.95rem; transition: 0.3s; }
+
+.header-right { 
+    display: flex; 
+    align-items: center; 
+    gap: 30px; 
+}
+
+.main-nav ul { 
+    list-style: none; 
+    display: flex; 
+    gap: 20px; 
+}
+
+.main-nav a { 
+    text-decoration: none; 
+    color: white; 
+    font-weight: 600; 
+    font-size: 0.95rem; 
+    transition: 0.3s; 
+}
+
 .main-nav a:hover { color: #f0610e; }
 
-/* DROPDOWN */
+/* --- DROPDOWN (Ürünlerimiz Menüsü) --- */
 .dropdown { position: relative; }
-.dropdown-content { display: none; position: absolute; background: white; min-width: 160px; box-shadow: 0 8px 16px rgba(0,0,0,0.2); border-radius: 8px; margin-top: 10px; }
-.dropdown-content a { color: #1a2a6c !important; padding: 12px 16px; display: block; border-bottom: 1px solid #eee; }
-.dropdown-content a:hover { background: #f8f9fa; color: #f0610e !important; }
-.dropdown:hover .dropdown-content { display: block; }
-.cta-header { background: #f0610e; color: white; padding: 8px 15px; border-radius: 5px; text-decoration: none; font-weight: bold; }
 
-/* --- AÇILIR BÖLÜMLER (HAKKIMIZDA & MARKALAR) --- */
-.toggle-section { padding: 60px 0; background: white; text-align: center; border-bottom: 4px solid #f0610e; animation: slideDown 0.4s ease-out; }
+.dropdown-content { 
+    display: none; 
+    position: absolute; 
+    background: white; 
+    min-width: 200px; 
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2); 
+    border-radius: 8px; 
+    margin-top: 10px; 
+}
+
+.dropdown-content a { 
+    color: #1a2a6c !important; 
+    padding: 12px 16px; 
+    display: block; 
+    border-bottom: 1px solid #eee; 
+}
+
+.dropdown-content a:hover { background: #f8f9fa; color: #f0610e !important; }
+
+.dropdown:hover .dropdown-content { display: block; }
+
+/* --- SUB-DROPDOWN (Maktek Alt Menüsü) --- */
+.sub-dropdown { position: relative; }
+
+.sub-dropdown-content {
+    display: none;
+    position: absolute;
+    left: 100%; /* Ana menünün sağına açılır */
+    top: 0;
+    background: #ffffff;
+    min-width: 180px;
+    box-shadow: 4px 8px 16px rgba(0,0,0,0.1);
+    border-radius: 0 8px 8px 8px;
+    z-index: 102;
+}
+
+.sub-dropdown:hover .sub-dropdown-content { display: block; }
+
+.sub-dropbtn { display: flex; justify-content: space-between; align-items: center; }
+
+/* --- TELEFON BUTONU --- */
+.cta-header { 
+    background: #f0610e; 
+    color: white; 
+    padding: 8px 15px; 
+    border-radius: 5px; 
+    text-decoration: none; 
+    font-weight: bold; 
+}
+
+/* --- AÇILIR/KAPANIR BÖLÜMLER --- */
+.toggle-section { 
+    padding: 60px 0; 
+    background: white; 
+    text-align: center; 
+    border-bottom: 4px solid #f0610e; 
+    animation: slideDown 0.4s ease-out; 
+}
+
 .brands-bg { background: #f1f1f1; }
-@keyframes slideDown { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
-.close-btn { margin-top: 20px; background: #1a2a6c; color: white; border: none; padding: 8px 25px; border-radius: 5px; cursor: pointer; transition: 0.3s; }
+
+@keyframes slideDown { 
+    from { opacity: 0; transform: translateY(-20px); } 
+    to { opacity: 1; transform: translateY(0); } 
+}
+
+.close-btn { 
+    margin-top: 20px; 
+    background: #1a2a6c; 
+    color: white; 
+    border: none; 
+    padding: 8px 25px; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: 0.3s; 
+}
+
 .close-btn:hover { background: #f0610e; }
 
-/* --- İÇERİK --- */
-.hero { background: linear-gradient(rgba(26,42,108,0.85), rgba(26,42,108,0.85)), url('https://images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&q=80'); background-size: cover; background-position: center; color: white; text-align: center; padding: 100px 0; }
+/* --- ANA İÇERİK (HERO) --- */
+.hero { 
+    background: linear-gradient(rgba(26,42,108,0.85), rgba(26,42,108,0.85)), 
+                url('https://images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&q=80'); 
+    background-size: cover; 
+    background-position: center; 
+    color: white; 
+    text-align: center; 
+    padding: 100px 0; 
+}
+
 .hero h2 { font-size: 2.8rem; margin-bottom: 20px; }
+
 .btn { display: inline-block; padding: 15px 30px; border-radius: 5px; text-decoration: none; font-weight: bold; margin: 10px; transition: 0.3s; }
 .whatsapp { background: #25d366; color: white; }
 .call { background: #f0610e; color: white; }
 .btn:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
 
-.brand-list { display: flex; justify-content: center; flex-wrap: wrap; gap: 30px; font-weight: bold; font-size: 1.3rem; color: #1a2a6c; margin-top: 20px; }
+/* --- MARKALAR LİSTESİ --- */
+.brand-list { 
+    display: flex; 
+    justify-content: center; 
+    flex-wrap: wrap; 
+    gap: 30px; 
+    font-weight: bold; 
+    font-size: 1.3rem; 
+    color: #1a2a6c; 
+    margin-top: 20px; 
+}
+
+/* --- HİZMET KARTLARI --- */
 .services { padding: 60px 0; display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; }
 .service-card { background: white; padding: 40px; border-radius: 12px; width: 320px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); text-align: center; }
 .icon { font-size: 3rem; margin-bottom: 20px; display: block; }
 
+/* --- BOT PROMOSYON --- */
 .bot-promo { padding: 60px 0; }
 .promo-box { background: white; border: 2px dashed #1a2a6c; padding: 40px; border-radius: 20px; text-align: center; max-width: 800px; margin: auto; }
-.bot-btn { background: #0088cc; color: white; margin-top: 20px; }
+.bot-btn { 
+    background: #0088cc; 
+    color: white; 
+    margin-top: 20px; 
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
 
+/* --- FOOTER --- */
 footer { background: #1a2a6c; color: white; text-align: center; padding: 60px 0; }
+footer a.btn { margin-top: 20px; }
 
-/* MOBİL AYAR */
-@media (max-width: 768px) {
-    .header-flex, .header-right { flex-direction: column; gap: 10px; }
-    .main-nav ul { gap: 10px; font-size: 0.8rem; }
-    .hero h2 { font-size: 2rem; }
+/* --- MOBİL UYUMLULUK --- */
+@media (max-width: 900px) {
+    .header-flex { flex-direction: column; gap: 15px; text-align: center; }
+    .header-right { flex-direction: column; gap: 15px; }
+    .main-nav ul { gap: 15px; font-size: 0.8rem; }
+    
+    /* Mobilde alt menü yana değil aşağı açılsın */
+    .sub-dropdown-content {
+        position: static;
+        left: 0;
+        box-shadow: none;
+        background: #f1f1f1;
+        width: 100%;
+    }
 }
