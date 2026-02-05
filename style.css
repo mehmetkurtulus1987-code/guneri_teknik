@@ -1,0 +1,26 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+body { background: #f8f9fa; color: #333; line-height: 1.6; }
+.container { width: 90%; max-width: 1200px; margin: auto; }
+
+header { background: #1a2a6c; color: white; padding: 20px 0; position: sticky; top: 0; z-index: 100; }
+header .logo h1 { font-size: 24px; }
+header .logo span { color: #f0610e; }
+
+.hero { background: linear-gradient(rgba(26, 42, 108, 0.8), rgba(26, 42, 108, 0.8)), url('https://images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&q=80'); 
+        background-size: cover; color: white; text-align: center; padding: 100px 0; }
+.hero h2 { font-size: 2.5rem; margin-bottom: 20px; }
+
+.btn { display: inline-block; padding: 15px 30px; border-radius: 5px; text-decoration: none; font-weight: bold; margin: 10px; transition: 0.3s; }
+.whatsapp { background: #25d366; color: white; }
+.call { background: #f0610e; color: white; }
+.btn:hover { opacity: 0.9; transform: translateY(-3px); }
+
+.services { padding: 50px 0; display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; }
+.service-card { background: white; padding: 30px; border-radius: 10px; width: 300px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); text-align: center; }
+.service-card h3 { color: #1a2a6c; margin-bottom: 15px; }
+
+footer { background: #333; color: white; text-align: center; padding: 20px 0; margin-top: 50px; }
+
+@media (max-width: 768px) {
+    .hero h2 { font-size: 1.8rem; }
+}
