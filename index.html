@@ -40,41 +40,40 @@
     <section id="hakkimizda" class="toggle-section" style="display: none;">
         <div class="container">
             <h3>Hakkımızda</h3>
-            <p>Güneri Teknik olarak, İzmir'in kuzey aksında (Menemen, Aliağa, Foça) yılların verdiği tecrübe ile kombi arıza, onarım ve parça değişimi konularında hizmet veriyoruz.</p>
+            <p>Güneri Teknik olarak, İzmir'in kuzey aksında (Menemen, Aliağa, Foça) yılların verdiği tecrübe ile hizmet veriyoruz.</p>
             <button onclick="toggleSection('hakkimizda')" class="close-btn">Kapat</button>
         </div>
     </section>
 
     <section id="maktek-ozel" class="toggle-section maktek-panel" style="display: none;">
         <div class="container">
-            <h3>Maktek Ürün Grupları</h3>
-            <p>Size en uygun ısınma çözümünü seçin:</p>
+            <h2 class="section-title">Maktek Ürün Grupları</h2>
             <div class="maktek-grid">
-                <div class="product-item">
-                    <div class="img-placeholder">📸 Fotoğraf Buraya</div>
+                <div class="product-card">
+                    <div class="img-box">📸 Fotoğraf Eklenecek</div>
                     <h4>Elektrikli Kombi</h4>
-                    <p>Omega Serisi tam modülasyonlu elektrikli kombiler.</p>
+                    <p>Omega Serisi tam modülasyonlu sistemler.</p>
                 </div>
-                <div class="product-item">
-                    <div class="img-placeholder">📸 Fotoğraf Buraya</div>
+                <div class="product-card">
+                    <div class="img-box">📸 Fotoğraf Eklenecek</div>
                     <h4>Doğalgazlı Kombi</h4>
-                    <p>Condense tam yoğuşmalı verimli çözümler.</p>
+                    <p>Yoğuşmalı yüksek verimli modeller.</p>
                 </div>
-                <div class="product-item">
-                    <div class="img-placeholder">📸 Fotoğraf Buraya</div>
+                <div class="product-card">
+                    <div class="img-box">📸 Fotoğraf Eklenecek</div>
                     <h4>Kömürlü Kazan</h4>
-                    <p>Katı yakıtlı otomatik yüklemeli ısıtma sistemleri.</p>
+                    <p>Katı yakıtlı otomatik yüklemeli kazanlar.</p>
                 </div>
             </div>
-            <button onclick="toggleSection('maktek-ozel')" class="close-btn">Geri Dön</button>
+            <button onclick="toggleSection('maktek-ozel')" class="close-btn">Paneli Kapat</button>
         </div>
     </section>
 
-    <section id="markalar-bolumu" class="toggle-section brands-bg" style="display: none;">
+    <section id="markalar-bolumu" class="toggle-section" style="display: none;">
         <div class="container">
             <h3>Uzmanlık Alanımız Olan Markalar</h3>
             <div class="brand-list">
-                <span>MAKTEK</span><span>SANICA</span><span>DİZAYN</span><span>ARISTON</span><span>HEXEL</span>
+                <span>SANICA</span><span>DİZAYN</span><span>ARISTON</span><span>HEXEL</span>
             </div>
             <button onclick="toggleSection('markalar-bolumu')" class="close-btn">Kapat</button>
         </div>
@@ -83,30 +82,10 @@
     <section class="hero">
         <div class="container">
             <h2>Kombiniz mi Arızalandı?</h2>
-            <p>Menemen, Aliağa ve Foça bölgesinde profesyonel kombi arıza ve teknik servis hizmetleri.</p>
+            <p>Profesyonel teknik servis ve orijinal yedek parça desteği.</p>
             <div class="action-buttons">
-                <a href="https://wa.me/905376183344" target="_blank" class="btn whatsapp">WhatsApp Destek</a>
-                <a href="tel:+905376183344" class="btn call">Şimdi Ara</a>
-            </div>
-        </div>
-    </section>
-
-    <section class="services">
-        <div class="container">
-            <div class="service-card">
-                <div class="icon">🛠️</div>
-                <h3>Hızlı Arıza Tamiri</h3>
-                <p>Arıza kodlarını yerinde tespit ediyor, çözüm üretiyoruz.</p>
-            </div>
-            <div class="service-card">
-                <div class="icon">⚙️</div>
-                <h3>Yedek Parça</h3>
-                <p>Orijinal parça desteği ile garantili onarım.</p>
-            </div>
-            <div class="service-card">
-                <div class="icon">📍</div>
-                <h3>Mobil Servis</h3>
-                <p>Menemen, Foça ve Aliağa'da kapınızdayız.</p>
+                <a href="https://wa.me/905376183344" target="_blank" class="btn whatsapp">WhatsApp</a>
+                <a href="tel:+905376183344" class="btn call">Hemen Ara</a>
             </div>
         </div>
     </section>
@@ -114,13 +93,31 @@
     <footer id="iletisim">
         <div class="container">
             <h3>İletişim</h3>
-            <p>Adres: Esatpaşa Mah. Menemen/İzmir</p>
-            <p style="font-size: 1.8rem; font-weight: bold; color: #f0610e; margin: 15px 0;">0537 618 33 44</p>
-            <p>Güneri Teknik - Menemen Kombi Servis Hizmetleri</p>
+            <p>Menemen, İzmir</p>
+            <p style="font-size: 1.5rem; color: #f0610e;">0537 618 33 44</p>
         </div>
     </footer>
 
     <script>
     function toggleSection(sectionId) {
-        const sections = document.querySelectorAll('.toggle-section');
-        const target = document.getElementById(sectionId);
+        // Tüm gizlenebilir bölümleri seç
+        const allSections = document.querySelectorAll('.toggle-section');
+        const targetSection = document.getElementById(sectionId);
+
+        // Eğer tıklanan bölüm zaten açıksa kapat
+        if (targetSection.style.display === "block") {
+            targetSection.style.display = "none";
+        } else {
+            // Önce hepsini kapat
+            allSections.forEach(section => {
+                section.style.display = "none";
+            });
+            // Sadece hedefi aç
+            targetSection.style.display = "block";
+            // Yumuşakça oraya kaydır
+            targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    }
+    </script>
+</body>
+</html>
