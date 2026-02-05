@@ -22,14 +22,7 @@
                         <li class="dropdown">
                             <a href="javascript:void(0)" class="dropbtn">Ürünlerimiz</a>
                             <div class="dropdown-content">
-                                <div class="sub-dropdown">
-                                    <a href="javascript:void(0)" class="sub-dropbtn">MAKTEK <span class="arrow">▸</span></a>
-                                    <div class="sub-dropdown-content">
-                                        <a href="javascript:void(0)" onclick="toggleSection('markalar-bolumu')">Elektrikli Kombi</a>
-                                        <a href="javascript:void(0)" onclick="toggleSection('markalar-bolumu')">Doğalgazlı Kombi</a>
-                                        <a href="javascript:void(0)" onclick="toggleSection('markalar-bolumu')">Kömürlü Kazan</a>
-                                    </div>
-                                </div>
+                                <a href="javascript:void(0)" onclick="toggleSection('maktek-ozel')">MAKTEK</a>
                                 <a href="javascript:void(0)" onclick="toggleSection('markalar-bolumu')">SANICA</a>
                                 <a href="javascript:void(0)" onclick="toggleSection('markalar-bolumu')">DİZAYN</a>
                                 <a href="javascript:void(0)" onclick="toggleSection('markalar-bolumu')">ARISTON</a>
@@ -47,8 +40,33 @@
     <section id="hakkimizda" class="toggle-section" style="display: none;">
         <div class="container">
             <h3>Hakkımızda</h3>
-            <p>Güneri Teknik olarak, İzmir'in kuzey aksında (Menemen, Aliağa, Foça) yılların verdiği tecrübe ile kombi arıza, onarım ve parça değişimi konularında hizmet veriyoruz. Müşteri memnuniyetini önceliğimiz yaparak, cihazlarınızdaki sorunları en kısa sürede ve garantili olarak çözüyoruz.</p>
+            <p>Güneri Teknik olarak, İzmir'in kuzey aksında (Menemen, Aliağa, Foça) yılların verdiği tecrübe ile kombi arıza, onarım ve parça değişimi konularında hizmet veriyoruz.</p>
             <button onclick="toggleSection('hakkimizda')" class="close-btn">Kapat</button>
+        </div>
+    </section>
+
+    <section id="maktek-ozel" class="toggle-section maktek-panel" style="display: none;">
+        <div class="container">
+            <h3>Maktek Ürün Grupları</h3>
+            <p>Size en uygun ısınma çözümünü seçin:</p>
+            <div class="maktek-grid">
+                <div class="product-item">
+                    <div class="img-placeholder">📸 Fotoğraf Buraya</div>
+                    <h4>Elektrikli Kombi</h4>
+                    <p>Omega Serisi tam modülasyonlu elektrikli kombiler.</p>
+                </div>
+                <div class="product-item">
+                    <div class="img-placeholder">📸 Fotoğraf Buraya</div>
+                    <h4>Doğalgazlı Kombi</h4>
+                    <p>Condense tam yoğuşmalı verimli çözümler.</p>
+                </div>
+                <div class="product-item">
+                    <div class="img-placeholder">📸 Fotoğraf Buraya</div>
+                    <h4>Kömürlü Kazan</h4>
+                    <p>Katı yakıtlı otomatik yüklemeli ısıtma sistemleri.</p>
+                </div>
+            </div>
+            <button onclick="toggleSection('maktek-ozel')" class="close-btn">Geri Dön</button>
         </div>
     </section>
 
@@ -56,11 +74,7 @@
         <div class="container">
             <h3>Uzmanlık Alanımız Olan Markalar</h3>
             <div class="brand-list">
-                <span>MAKTEK</span>
-                <span>SANICA</span>
-                <span>DİZAYN</span>
-                <span>ARISTON</span>
-                <span>HEXEL</span>
+                <span>MAKTEK</span><span>SANICA</span><span>DİZAYN</span><span>ARISTON</span><span>HEXEL</span>
             </div>
             <button onclick="toggleSection('markalar-bolumu')" class="close-btn">Kapat</button>
         </div>
@@ -71,7 +85,7 @@
             <h2>Kombiniz mi Arızalandı?</h2>
             <p>Menemen, Aliağa ve Foça bölgesinde profesyonel kombi arıza ve teknik servis hizmetleri.</p>
             <div class="action-buttons">
-                <a href="https://wa.me/905376183344?text=Merhaba,%20kombi%20arızası%20için%20destek%20istiyorum." target="_blank" rel="noopener noreferrer" class="btn whatsapp">WhatsApp Destek</a>
+                <a href="https://wa.me/905376183344" target="_blank" class="btn whatsapp">WhatsApp Destek</a>
                 <a href="tel:+905376183344" class="btn call">Şimdi Ara</a>
             </div>
         </div>
@@ -82,27 +96,17 @@
             <div class="service-card">
                 <div class="icon">🛠️</div>
                 <h3>Hızlı Arıza Tamiri</h3>
-                <p>Arıza kodlarını yerinde tespit ediyor, en kısa sürede çözüm üretiyoruz.</p>
+                <p>Arıza kodlarını yerinde tespit ediyor, çözüm üretiyoruz.</p>
             </div>
             <div class="service-card">
                 <div class="icon">⚙️</div>
                 <h3>Yedek Parça</h3>
-                <p>Ariston, Maktek ve diğer markalar için orijinal parça desteği.</p>
+                <p>Orijinal parça desteği ile garantili onarım.</p>
             </div>
             <div class="service-card">
                 <div class="icon">📍</div>
-                <h3>Geniş Hizmet Ağı</h3>
-                <p>Menemen, Foça ve Aliağa bölgesinde servis aracımızla kapınızdayız.</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="bot-promo">
-        <div class="container">
-            <div class="promo-box">
-                <h4>Arıza Kodunu Kendin Sorgula!</h4>
-                <p>Kombiniz hata mı veriyor? Telegram asistanımıza bağlanarak sorunu hemen öğrenebilirsiniz.</p>
-                <a href="https://t.me/Guneriteknikbot" target="_blank" rel="noopener noreferrer" class="btn bot-btn">Telegram Arıza Botu 🤖</a>
+                <h3>Mobil Servis</h3>
+                <p>Menemen, Foça ve Aliağa'da kapınızdayız.</p>
             </div>
         </div>
     </section>
@@ -110,26 +114,13 @@
     <footer id="iletisim">
         <div class="container">
             <h3>İletişim</h3>
-            <p>Hafta içi ve Cumartesi: 08:00 - 20:30</p>
-            <p>📬 Esatpaşa Mah. 1. Abdi İpekçi geçidi No:15, Menemen/İzmir</p>
-            <a href="https://tinyurl.com/guneriteknik" target="_blank" rel="noopener noreferrer" class="btn call" style="margin: 20px 0;">📍 Yol Tarifi Al</a>
-            <p style="font-size: 1.8rem; font-weight: bold; color: #f0610e;">0537 618 33 44</p>
+            <p>Adres: Esatpaşa Mah. Menemen/İzmir</p>
+            <p style="font-size: 1.8rem; font-weight: bold; color: #f0610e; margin: 15px 0;">0537 618 33 44</p>
             <p>Güneri Teknik - Menemen Kombi Servis Hizmetleri</p>
         </div>
     </footer>
 
     <script>
     function toggleSection(sectionId) {
-        var x = document.getElementById(sectionId);
-        if (x.style.display === "none") {
-            document.querySelectorAll('.toggle-section').forEach(sec => sec.style.display = 'none');
-            x.style.display = "block";
-            x.scrollIntoView({ behavior: 'smooth' });
-        } else {
-            x.style.display = "none";
-        }
-    }
-    </script>
-
-</body>
-</html>
+        const sections = document.querySelectorAll('.toggle-section');
+        const target = document.getElementById(sectionId);
