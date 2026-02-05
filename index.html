@@ -40,7 +40,7 @@
     <section id="hakkimizda" class="toggle-section" style="display: none;">
         <div class="container">
             <h3>Hakkımızda</h3>
-            <p>Güneri Teknik olarak, İzmir'in kuzey aksında (Menemen, Aliağa, Foça) yılların verdiği tecrübe ile hizmet veriyoruz.</p>
+            <p>Güneri Teknik olarak, İzmir'in kuzey aksında (Menemen, Aliağa, Foça) yılların verdiği tecrübe ile kombi arıza, onarım ve parça değişimi konularında profesyonel hizmet veriyoruz.</p>
             <button onclick="toggleSection('hakkimizda')" class="close-btn">Kapat</button>
         </div>
     </section>
@@ -49,40 +49,45 @@
         <div class="container">
             <h2 class="section-title">Maktek Ürün Grupları</h2>
             <div class="maktek-grid">
+                
                 <div class="product-card">
                     <div class="img-box">
-                        <img src="https://maktek.com.tr/tr/wp-content/uploads/2023/09/omegalcd1.jpg" alt="Maktek Omega LCD Elektrikli Kombi" class="product-img">
+                        <img src="https://placehold.co/400x400?text=Elektrikli+Kombi" alt="Omega" class="product-img">
                     </div>
-                    <h4>Maktek Omega LCD Elektrikli Kombi</h4>
-                    <p>Omega Serisi tam modülasyonlu sistemler.</p>
-                    <p>Yüksek yoğuşma verimi
-Avrupa Birliği Enerji Verimliliği Direktifi (Energy Related Products – Erp) ile tam uyumludur
-A sınıfı ısıtma ve sıcak su verimliliği
-26 farklı noktada çoklu güvenlik sistemi
-Düşük emisyon değerleri ile karbon ayak izinizi minimuma indirir
-3 yıl koşulsuz fabrika garantisi
-Epsilon ECO Yoğuşmalı Kombi, montaj ve kullanım kolaylığı ile hem yeni projelerde hem de mevcut ısınma sisteminin yenilenmesinde kullanılabilir. Yerden ısıtma sistemleriyle uyumludur. 24 kw – 30 kw kapasite seçenekleriyle pek çok farklı ısınma ihtiyacına çözüm getirir. Aksesuar olarak bağlanabilecek dış hava sensörü yardımıyla dış ortam sıcaklığına göre otomatik olarak değişen farklı konfor eğrilerinde işletme mümkündür.</p>
+                    <h4 class="model-link" onclick="openModal('Maktek Omega Elektrikli', '• 9kW - 36kW arası geniş kapasite<br>• %99 verimle çalışma<br>• Dijital kontrol paneli<br>• Pompa ve donma koruması')">
+                        Omega Serisi ▸
+                    </h4>
+                    <p>Elektrikli Kombi</p>
                 </div>
+
                 <div class="product-card">
                     <div class="img-box">
-                        <img src="https://maktek.com.tr/tr/wp-content/uploads/2018/11/Epsilon-Eco-Genel.jpg" alt="Maktek Epsilon Doğalgazlı Kombi" class="product-img">
+                        <img src="https://maktek.com.tr/tr/wp-content/uploads/2018/11/Epsilon-Eco-Genel.jpg" alt="Epsilon" class="product-img">
                     </div>
-                    <h4>Maktek Epsilon ECO Yoğuşmalı Kombi</h4>
-                    <p>Yoğuşmalı yüksek verimli modeller.</p>
+                    <h4 class="model-link" onclick="openModal('Maktek Epsilon Eco', '• Tam yoğuşma teknolojisi<br>• Düşük yakıt tüketimi<br>• Sessiz çalışma (45 dB)<br>• Arıza teşhis ve emniyet sistemi')">
+                        Epsilon Eco ▸
+                    </h4>
+                    <p>Doğalgazlı Yoğuşmalı</p>
                 </div>
+
                 <div class="product-card">
-                    <div class="img-box">📸 Fotoğraf Eklenecek</div>
-                    <h4>Kömürlü Kazan</h4>
-                    <p>Katı yakıtlı otomatik yüklemeli kazanlar.</p>
+                    <div class="img-box">
+                        <img src="https://placehold.co/400x400?text=Kazan" alt="Kazan" class="product-img">
+                    </div>
+                    <h4 class="model-link" onclick="openModal('Maktek Otomatik Kazan', '• Stokerli (Otomatik Yüklemeli)<br>• %85 verimle yanma<br>• Kömür, fındık kabuğu ve pelet uyumlu<br>• Dijital kumanda panosu')">
+                        Katı Yakıtlı Kazan ▸
+                    </h4>
+                    <p>Kömürlü / Peletli Sistemler</p>
                 </div>
+
             </div>
             <button onclick="toggleSection('maktek-ozel')" class="close-btn">Paneli Kapat</button>
         </div>
     </section>
 
-    <section id="markalar-bolumu" class="toggle-section" style="display: none;">
+    <section id="markalar-bolumu" class="toggle-section brands-bg" style="display: none;">
         <div class="container">
-            <h3>Uzmanlık Alanımız Olan Markalar</h3>
+            <h3>Hizmet Verdiğimiz Markalar</h3>
             <div class="brand-list">
                 <span>SANICA</span><span>DİZAYN</span><span>ARISTON</span><span>HEXEL</span>
             </div>
@@ -90,44 +95,64 @@ Epsilon ECO Yoğuşmalı Kombi, montaj ve kullanım kolaylığı ile hem yeni pr
         </div>
     </section>
 
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+            <h2 id="modalTitle">Ürün Adı</h2>
+            <div id="modalBody">Özellikler yükleniyor...</div>
+            <a id="modalWaBtn" href="#" target="_blank" class="btn whatsapp" style="display:block; margin-top:20px;">Bu Ürün Hakkında Fiyat Al</a>
+        </div>
+    </div>
+
     <section class="hero">
         <div class="container">
             <h2>Kombiniz mi Arızalandı?</h2>
-            <p>Profesyonel teknik servis ve orijinal yedek parça desteği.</p>
+            <p>Menemen, Aliağa ve Foça bölgesinde profesyonel teknik servis.</p>
             <div class="action-buttons">
-                <a href="https://wa.me/905376183344" target="_blank" class="btn whatsapp">WhatsApp</a>
-                <a href="tel:+905376183344" class="btn call">Hemen Ara</a>
+                <a href="https://wa.me/905376183344" target="_blank" class="btn whatsapp">WhatsApp Destek</a>
+                <a href="tel:+905376183344" class="btn call">Şimdi Ara</a>
             </div>
         </div>
     </section>
 
     <footer id="iletisim">
         <div class="container">
-            <h3>İletişim</h3>
-            <p>Menemen, İzmir</p>
-            <p style="font-size: 1.5rem; color: #f0610e;">0537 618 33 44</p>
+            <h3>GÜNERİ TEKNİK</h3>
+            <p>0537 618 33 44</p>
         </div>
     </footer>
 
     <script>
+    // Panel Açma/Kapama
     function toggleSection(sectionId) {
-        // Tüm gizlenebilir bölümleri seç
-        const allSections = document.querySelectorAll('.toggle-section');
-        const targetSection = document.getElementById(sectionId);
-
-        // Eğer tıklanan bölüm zaten açıksa kapat
-        if (targetSection.style.display === "block") {
-            targetSection.style.display = "none";
+        const sections = document.querySelectorAll('.toggle-section');
+        const target = document.getElementById(sectionId);
+        if (target.style.display === "none" || target.style.display === "") {
+            sections.forEach(s => s.style.display = "none");
+            target.style.display = "block";
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
         } else {
-            // Önce hepsini kapat
-            allSections.forEach(section => {
-                section.style.display = "none";
-            });
-            // Sadece hedefi aç
-            targetSection.style.display = "block";
-            // Yumuşakça oraya kaydır
-            targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            target.style.display = "none";
         }
+    }
+
+    // Modal Fonksiyonları
+    function openModal(title, features) {
+        document.getElementById('modalTitle').innerText = title;
+        document.getElementById('modalBody').innerHTML = features;
+        // WhatsApp linkini ürüne özel günceller
+        const waMsg = encodeURIComponent("Merhaba, " + title + " ürünü hakkında detaylı bilgi ve fiyat alabilir miyim?");
+        document.getElementById('modalWaBtn').href = "https://wa.me/905376183344?text=" + waMsg;
+        document.getElementById('productModal').style.display = "block";
+    }
+
+    function closeModal() {
+        document.getElementById('productModal').style.display = "none";
+    }
+
+    window.onclick = function(event) {
+        const modal = document.getElementById('productModal');
+        if (event.target == modal) { closeModal(); }
     }
     </script>
 </body>
