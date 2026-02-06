@@ -34,11 +34,11 @@
                     <li class="dropdown">
                         <a href="javascript:void(0)" class="dropbtn">Yedek Parça</a>
                         <div class="dropdown-content">
-                            <a href="javascript:void(0)" onclick="toggleSection('maktek-ozel')">MAKTEK</a>
-                            <a href="javascript:void(0)" onclick="toggleSection('sanica-ozel')">SANICA</a>
-                            <a href="javascript:void(0)" onclick="toggleSection('markalar-bolumu')">DİZAYN</a>
-                            <a href="javascript:void(0)" onclick="toggleSection('markalar-bolumu')">ARISTON</a>
-                            <a href="javascript:void(0)" onclick="toggleSection('markalar-bolumu')">HEXEL</a>
+                            <a href="javascript:void(0)" onclick="toggleSection('maktek-yed-par')">MAKTEK</a>
+                            <a href="javascript:void(0)" onclick="toggleSection('sanica-yed-par')">SANICA</a>
+                            <a href="javascript:void(0)" onclick="toggleSection('markalar-yed-par')">DİZAYN</a>
+                            <a href="javascript:void(0)" onclick="toggleSection('markalar-yed-par')">ARISTON</a>
+                            <a href="javascript:void(0)" onclick="toggleSection('markalar-yed-par')">HEXEL</a>
                         </div>
                     <li><a href="#iletisim">İletişim</a></li>
                 </ul>
@@ -94,6 +94,37 @@
                 <span>SANICA</span><span>DİZAYN</span><span>ARISTON</span><span>HEXEL</span>
             </div>
             <button onclick="toggleSection('markalar-bolumu')" class="close-btn">Kapat</button>
+        </div>
+    </section>
+    <section id="maktek-yed-par" class="toggle-section maktek-panel" style="display: none;">
+        <div class="container">
+            <h2 class="section-title">Maktek Ürün Grupları</h2>
+            <div class="maktek-grid">
+                <div class="product-card">
+                    <div class="img-box">
+                        <img src="https://maktek.com.tr/tr/wp-content/uploads/2023/09/omegalcd1.jpg" alt="Omega" class="product-img">
+                    </div>
+                    <h4 class="model-link" onclick="openModal('Maktek Omega Elektrikli', '...')">Omega LCD Elektrikli Kombi ▸</h4>
+                    <p>Elektrikli Kombi</p>
+                </div>
+            </div>
+            <button onclick="toggleSection('maktek-yed-par')" class="close-btn">Paneli Kapat</button>
+        </div>
+    </section>
+
+    <section id="sanica-yed-par" class="toggle-section maktek-panel" style="display: none;">
+        <div class="container">
+            <h2 class="section-title">Sanica Ürün Grupları</h2>
+            <div class="maktek-grid">
+                <div class="product-card">
+                    <div class="img-box">
+                        <img src="https://www.sanicaisi.com.tr/wp-content/uploads/2019/07/kral-kombi-1024x995.jpg" alt="Kral" class="product-img">
+                    </div>
+                    <h4 class="model-link" onclick="openModal('Sanica Kral Yoğuşmalı', '...')">Kral Yoğuşmalı ▸</h4>
+                    <p>Tam Yoğuşmalı Kombi</p>
+                </div>
+            </div>
+            <button onclick="toggleSection('sanica-yed-par')" class="close-btn">Paneli Kapat</button>
         </div>
     </section>
 
