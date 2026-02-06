@@ -8,42 +8,43 @@ header { background: #1a2a6c; color: white; padding: 15px 0; position: sticky; t
 .header-flex { display: flex; justify-content: space-between; align-items: center; }
 .header-right { display: flex; align-items: center; gap: 20px; }
 
-/* Menü elemanlarını dikeyde tam ortalamak için align-items eklendi */
 .main-nav ul { 
     list-style: none; 
     display: flex; 
     gap: 15px; 
     align-items: center; 
+    overflow: visible; /* Dropdown'ın görünmesi için */
 }
 
-.main-nav a { 
+.main-nav a, .dropbtn { 
     text-decoration: none; 
     color: white; 
     font-weight: 600; 
     cursor: pointer; 
     transition: 0.3s; 
-    line-height: 1; /* Yazı yüksekliğini sabitleyerek kaymayı önler */
+    line-height: 1;
+    display: block;
 }
-.main-nav a:hover { color: #f0610e; }
+.main-nav a:hover, .dropdown:hover .dropbtn, .dropdown.active .dropbtn { color: #f0610e; }
 
-/* --- DROPDOWN --- */
+/* --- DROPDOWN GÜNCELLEME --- */
 .dropdown { 
     position: relative; 
     display: flex; 
     align-items: center; 
+    height: 100%;
 }
 
-/* Ürünlerimiz yazısının aşağıda kalmasına sebep olan padding: 10px silindi */
-.dropbtn {
-    text-decoration: none;
-    color: white;
-    font-weight: 600;
-    cursor: pointer;
-    transition: 0.3s;
-    line-height: 1;
+/* Mouse'un yazıdan kutuya geçerken boşluğa düşmemesi için görünmez köprü */
+.dropdown::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 15px;
+    z-index: 2500;
 }
-
-.dropdown:hover .dropbtn { color: #f0610e; }
 
 .dropdown-content { 
     display: none; 
@@ -52,13 +53,26 @@ header { background: #1a2a6c; color: white; padding: 15px 0; position: sticky; t
     left: 0; 
     background: white; 
     min-width: 180px; 
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1); 
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15); 
     border-radius: 4px; 
     overflow: hidden;
-    margin-top: 10px; /* Açılır menü ile başlık arasında küçük boşluk */
+    margin-top: 5px; 
+    z-index: 3000;
 }
-.dropdown:hover .dropdown-content { display: block; }
-.dropdown-content a { color: #1a2a6c !important; padding: 12px; display: block; border-bottom: 1px solid #eee; font-size: 0.9rem; }
+
+/* Hem hover hem de JS ile eklenen active durumunda göster */
+.dropdown:hover .dropdown-content, 
+.dropdown.active .dropdown-content { 
+    display: block; 
+}
+
+.dropdown-content a { 
+    color: #1a2a6c !important; 
+    padding: 12px; 
+    display: block; 
+    border-bottom: 1px solid #eee; 
+    font-size: 0.9rem; 
+}
 .dropdown-content a:hover { background: #f1f1f1; }
 
 /* --- KATALOG PANELİ & GRID --- */
@@ -75,7 +89,7 @@ header { background: #1a2a6c; color: white; padding: 15px 0; position: sticky; t
 .model-link:hover { color: #f0610e; text-decoration: underline; }
 
 /* --- MODAL (POP-UP) --- */
-.modal { display: none; position: fixed; z-index: 3000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); backdrop-filter: blur(4px); }
+.modal { display: none; position: fixed; z-index: 4000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); backdrop-filter: blur(4px); }
 .modal-content { background: #fff; margin: 10% auto; padding: 30px; border-radius: 15px; width: 90%; max-width: 450px; text-align: center; position: relative; animation: zoomIn 0.3s ease; }
 @keyframes zoomIn { from { opacity: 0; transform: scale(0.9); } to { opacity: 1; transform: scale(1); } }
 .close-modal { position: absolute; right: 15px; top: 10px; font-size: 28px; cursor: pointer; color: #aaa; }
@@ -124,100 +138,40 @@ header { background: #1a2a6c; color: white; padding: 15px 0; position: sticky; t
 .call { background: #f0610e; color: white; }
 .close-btn { margin-top: 30px; padding: 10px 30px; background: #1a2a6c; color: white; border-radius: 5px; border: none; cursor: pointer; }
 
-/* --- FOOTER YENİ ÜÇLÜ DÜZEN --- */
-footer { 
-    background: #1a2a6c; 
-    color: white; 
-    padding: 50px 0; 
-    border-top: 3px solid #f0610e;
-}
-
-.footer-flex-alt {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    gap: 30px;
-}
-
-.footer-kvkk-zone h4, 
-.footer-hizmetler h4 {
-    font-weight: 700;
-    font-size: 1.2rem;
-    margin-bottom: 15px;
-    color: #f0610e;
-}
-
+/* --- FOOTER --- */
+footer { background: #1a2a6c; color: white; padding: 50px 0; border-top: 3px solid #f0610e; }
+.footer-flex-alt { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 30px; }
+.footer-kvkk-zone h4, .footer-hizmetler h4 { font-weight: 700; font-size: 1.2rem; margin-bottom: 15px; color: #f0610e; }
 .footer-kvkk-zone { flex: 1; min-width: 150px; }
-.footer-links a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 0.9rem;
-    opacity: 0.7;
-    transition: 0.3s;
-}
+.footer-links a { color: #fff; text-decoration: none; font-size: 0.9rem; opacity: 0.7; transition: 0.3s; }
 .footer-links a:hover { opacity: 1; color: #f0610e; }
-
 .footer-hizmetler { flex: 2; min-width: 250px; }
 .footer-hizmetler ul { list-style: none; }
 .footer-hizmetler ul li { font-size: 0.95rem; line-height: 2; opacity: 0.9; }
-
 .footer-info { flex: 1; text-align: right; min-width: 200px; }
+.footer-tel-link { color: white; text-decoration: none; font-weight: 600; transition: 0.3s; }
+.footer-tel-link:hover { color: #f0610e; }
 
 /* --- FOOTER ALT BİLGİ SATIRI --- */
 .footer-bottom {
-    background: #152252; /* Footer'dan bir ton daha koyu, derinlik katar */
+    background: #152252;
     color: rgba(255, 255, 255, 0.7);
     padding: 20px 0;
     text-align: center;
     font-size: 0.8rem;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
-
-.footer-bottom a {
-    color: #f0610e;
-    text-decoration: underline;
-    font-weight: 600;
-}
-
-.footer-bottom a:hover {
-    color: white;
-}
-
-/* Tıklanabilir Telefon Numarası Stili */
-.footer-tel-link {
-    color: white;
-    text-decoration: none;
-    font-weight: 600;
-    transition: 0.3s;
-}
-.footer-tel-link:hover {
-    color: #f0610e;
-}
+.footer-bottom a { color: #f0610e; text-decoration: underline; font-weight: 600; }
+.footer-bottom a:hover { color: white; }
 
 /* --- MOBİL UYUMLULUK --- */
 @media (max-width: 768px) {
     .header-flex, .header-right { flex-direction: column; text-align: center; gap: 10px; }
     .modal-content { margin: 20% auto; width: 95%; }
-    
-    .footer-flex-alt {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: 35px;
-    }
+    .footer-flex-alt { flex-direction: column; align-items: center; text-align: center; gap: 35px; }
     .footer-info { text-align: center; }
     .footer-kvkk-zone, .footer-hizmetler, .footer-info { flex: none; width: 100%; }
-
-    /* Mobil için metin sığdırma */
-@media (max-width: 768px) {
-    .footer-bottom {
-        padding: 25px 15px;
-        line-height: 1.5;
-    }
-}
-
-    /* Mobilde metinleri gizle, sadece ikon kalsın */
+    .footer-bottom { padding: 25px 15px; line-height: 1.5; }
     .tg-text { display: none; }
     .tg-btn, .wa-btn { padding: 12px; border-radius: 50%; }
 }
