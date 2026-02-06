@@ -164,40 +164,50 @@ footer { background: #1a2a6c; color: white; padding: 50px 0; border-top: 3px sol
 .footer-bottom a { color: #f0610e; text-decoration: underline; font-weight: 600; }
 .footer-bottom a:hover { color: white; }
 
-/* Yol Tarifi Linki Stili */
+/* --- YOL TARİFİ BUTON TASARIMI --- */
 .direction-wrapper {
-    margin-top: 8px; /* Telefon numarası ile arasındaki boşluk */
-}
-
-.nav-link {
-    color: #f0610e; /* Marka turuncun */
-    text-decoration: none;
-    font-size: 0.9rem;
-    font-weight: 600;
-    transition: 0.3s;
-    display: inline-flex;
-    align-items: center;
-}
-
-.nav-link::before {
-    content: '📍'; /* Başına küçük bir ikon ekler */
-    margin-right: 5px;
-}
-
-.nav-link:hover {
-    color: white; /* Üzerine gelince beyaz olur (arka plan koyuysa güzel durur) */
-    text-decoration: underline;
-}
-
-/* Footer info sağa yaslıysa yazıyı hizalar */
-.footer-info .direction-wrapper {
+    margin-top: 15px;
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-end; /* Sağ tarafa yaslar */
 }
 
+.nav-button {
+    background: linear-gradient(135deg, #f0610e 0%, #d4510a 100%);
+    color: white !important;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(240, 97, 14, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-button span {
+    font-size: 1.1rem;
+}
+
+.nav-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(240, 97, 14, 0.5);
+    background: linear-gradient(135deg, #ff7221 0%, #f0610e 100%);
+    color: white !important;
+}
+
+/* Mobil için ortalama */
 @media (max-width: 768px) {
-    .footer-info .direction-wrapper {
-        justify-content: center; /* Mobilde ortalar */
+    .direction-wrapper {
+        justify-content: center;
+        margin-top: 20px;
+    }
+    .nav-button {
+        width: 100%; /* Mobilde tam genişlik istersen bunu kullanabilirsin */
+        max-width: 280px;
+        justify-content: center;
     }
 }
 
