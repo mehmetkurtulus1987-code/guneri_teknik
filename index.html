@@ -161,18 +161,48 @@
                 <a href="tel:+905376183344" class="btn call">Şimdi Ara</a>
             </div>
         </div>
+    <section id="kvkk-paneli" class="toggle-section" style="display: none; background: #fff; border-top: 2px solid #eee;">
+    <div class="container">
+        <h3>KVKK Aydınlatma Metni</h3>
+        <p style="font-size: 0.9rem; line-height: 1.6; color: #666; text-align: left; margin-top: 15px;">
+            Güneri Teknik olarak kişisel verilerinizin güvenliğine önem veriyoruz. İletişim formlarımız veya randevu sistemimiz aracılığıyla paylaştığınız isim ve telefon numarası gibi bilgiler, yalnızca size hizmet sunmak ve randevu takibi yapmak amacıyla kullanılmaktadır...
+        </p>
+        <button onclick="toggleSection('kvkk-paneli')" class="close-btn">Kapat</button>
+    </div>
     </section>
 
-    <footer id="iletisim">
-        <div class="container">
-            <h3>GÜNERİ TEKNİK</h3>
-            <p>📍 Menemen - Aliağa - Foça</p>
-            <p>📞 0537 618 33 44</p>
-            <a href="https://t.me/Guneriteknik_bot" target="_blank" style="color: #0088cc; text-decoration: none; font-weight: bold; display: inline-block; margin-top: 10px;">
-                ✈️ Telegram Asistanı ile Arıza Nedenlerini Sorgulayabilirsiniz.
-            </a>
-        </div>
-    </footer>
+        <section id="hizmetler-paneli" class="toggle-section" style="display: none; background: #f1f1f1; border-top: 2px solid #eee;">
+            <div class="container">
+                <h3>Hizmetlerimiz</h3>
+                <ul style="text-align: left; display: inline-block; margin-top: 15px; line-height: 2;">
+                    <li>✅ Kombi Arıza ve Tamir Servisi</li>
+                    <li>✅ Yıllık Periyodik Kombi Bakımı</li>
+                    <li>✅ Petek Temizliği ve Tesisat Bakımı</li>
+                    <li>✅ Oda Termostatı Montajı</li>
+                    <li>✅ Kart Tamiri ve Parça Değişimi</li>
+                </ul>
+                    <br>
+                <button onclick="toggleSection('hizmetler-paneli')" class="close-btn">Kapat</button>
+            </div>
+        </section>
+
+            <footer id="iletisim">
+                <div class="container footer-flex-alt">
+                <div class="footer-links">
+                    <a href="javascript:void(0)" onclick="toggleSection('kvkk-paneli')">KVKK Politikaları</a>
+                    <a href="javascript:void(0)" onclick="toggleSection('hizmetler-paneli')">Hizmetlerimiz</a>
+                </div>
+
+                    <div class="footer-info">
+                    <h3>GÜNERİ TEKNİK</h3>
+                    <p>📍 Menemen - Aliağa - Foça</p>
+                    <p>📞 0537 618 33 44</p>
+                    <a href="https://t.me/Guneriteknik_bot" target="_blank" class="footer-tg-link">
+                    ✈️ Telegram Asistanı ile arıza nedeni öğren
+                    </a>
+                    </div>
+                </div>
+            </footer>
 
     <script>
     function toggleSection(sectionId) {
