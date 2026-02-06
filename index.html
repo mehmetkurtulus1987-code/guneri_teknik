@@ -11,31 +11,32 @@
 <body>
 
     <header>
-        <div class="container header-flex">
-            <div class="logo">
-                <h1>GÜNERİ <span>TEKNİK</span></h1>
-            </div>
-            
-            <div class="header-right">
-                <nav class="main-nav">
-                    <ul>
-                        <li><a href="javascript:void(0)" onclick="toggleSection('hakkimizda')">Hakkımızda</a></li>
-                        <li class="dropdown">
-                            <a href="javascript:void(0)" class="dropbtn">Ürünlerimiz</a>
-                            <div class="dropdown-content">
-                                <a href="javascript:void(0)" onclick="toggleSection('maktek-ozel')">MAKTEK</a>
-                                <a href="javascript:void(0)" onclick="toggleSection('sanica-ozel')">SANICA</a>
-                                <a href="javascript:void(0)" onclick="toggleSection('markalar-bolumu')">DİZAYN</a>
-                                <a href="javascript:void(0)" onclick="toggleSection('markalar-bolumu')">ARISTON</a>
-                                <a href="javascript:void(0)" onclick="toggleSection('markalar-bolumu')">HEXEL</a>
-                            </div>
-                        </li>
-                        <li><a href="#iletisim">İletişim</a></li>
-                    </ul>
-                </nav>
-            </div>
+    <div class="container header-flex">
+        <div class="logo" style="display: flex; align-items: center; gap: 12px;">
+            <img src="GT Logo.jpg" alt="Güneri Teknik Logo" class="site-logo">
+            <h1 style="margin: 0;">GÜNERİ <span>TEKNİK</span></h1>
         </div>
-    </header>
+        
+        <div class="header-right">
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="javascript:void(0)" onclick="toggleSection('hakkimizda')">Hakkımızda</a></li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="dropbtn">Ürünlerimiz</a>
+                        <div class="dropdown-content">
+                            <a href="javascript:void(0)" onclick="toggleSection('maktek-ozel')">MAKTEK</a>
+                            <a href="javascript:void(0)" onclick="toggleSection('sanica-ozel')">SANICA</a>
+                            <a href="javascript:void(0)" onclick="toggleSection('markalar-bolumu')">DİZAYN</a>
+                            <a href="javascript:void(0)" onclick="toggleSection('markalar-bolumu')">ARISTON</a>
+                            <a href="javascript:void(0)" onclick="toggleSection('markalar-bolumu')">HEXEL</a>
+                        </div>
+                    </li>
+                    <li><a href="#iletisim">İletişim</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
 
     <section id="hakkimizda" class="toggle-section" style="display: none;">
         <div class="container">
