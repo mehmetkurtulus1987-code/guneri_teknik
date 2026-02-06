@@ -140,17 +140,29 @@ header { background: #1a2a6c; color: white; padding: 15px 0; position: sticky; t
 /* --- HERO & GENEL --- */
 .toggle-section { padding: 60px 0; animation: fadeIn 0.4s ease; }
 @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-.hero { background: linear-gradient(rgba(26,42,108,0.8), rgba(26,42,108,0.8)), url('https://images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&q=80'); background-size: cover; padding: 120px 0; color: white; text-align: center; }
+
+/* Orta boşluğu dolduran kritik güncelleme */
+.hero { 
+    background: linear-gradient(rgba(26,42,108,0.8), rgba(26,42,108,0.8)), url('https://images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&q=80'); 
+    background-size: cover; 
+    padding: 120px 0; 
+    color: white; 
+    text-align: center;
+    flex: 1; /* Boş kalan tüm alanı doldurur */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
 .close-btn { margin-top: 30px; padding: 10px 30px; background: #1a2a6c; color: white; border-radius: 5px; border: none; cursor: pointer; }
 
-/* --- FOOTER (GÜNCELLENDİ) --- */
+/* --- FOOTER --- */
 footer { 
     background: #1a2a6c; 
     color: white; 
     padding: 50px 0; 
     border-top: 3px solid #f0610e; 
-    margin-top: auto; /* İçerik az olsa bile en alta iter */
+    margin-top: auto; /* Footer'ı her zaman en alta iter */
 }
 .footer-flex-alt { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 30px; }
 .footer-kvkk-zone h4, .footer-hizmetler h4 { font-weight: 700; font-size: 1.2rem; margin-bottom: 15px; color: #f0610e; }
