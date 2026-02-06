@@ -78,7 +78,7 @@ header { background: #1a2a6c; color: white; padding: 15px 0; position: sticky; t
 
 .btn { padding: 12px 30px; border-radius: 6px; text-decoration: none; font-weight: bold; display: inline-block; transition: 0.3s; border: none; cursor: pointer; }
 .whatsapp { background: #25d366; color: white; }
-.call, .cta-header { background: #f0610e; color: white; }
+.call { background: #f0610e; color: white; }
 .close-btn { margin-top: 30px; padding: 10px 30px; background: #1a2a6c; color: white; border-radius: 5px; border: none; cursor: pointer; }
 
 /* --- FOOTER YENİ ÜÇLÜ DÜZEN --- */
@@ -91,13 +91,12 @@ footer {
 
 .footer-flex-alt {
     display: flex;
-    justify-content: space-between; /* Üç sütunu aralıklı yayar */
+    justify-content: space-between;
     align-items: flex-start;
     flex-wrap: wrap;
     gap: 30px;
 }
 
-/* Başlık Stilleri (Ortak) */
 .footer-kvkk-zone h4, 
 .footer-hizmetler h4 {
     font-weight: 700;
@@ -106,12 +105,7 @@ footer {
     color: #f0610e;
 }
 
-/* KVKK Bölümü */
-.footer-kvkk-zone {
-    flex: 1;
-    min-width: 150px;
-}
-
+.footer-kvkk-zone { flex: 1; min-width: 150px; }
 .footer-links a {
     color: #fff;
     text-decoration: none;
@@ -119,69 +113,39 @@ footer {
     opacity: 0.7;
     transition: 0.3s;
 }
+.footer-links a:hover { opacity: 1; color: #f0610e; }
 
-/* Hizmetler Bölümü */
-.footer-hizmetler {
-    flex: 2;
-    min-width: 250px;
+.footer-hizmetler { flex: 2; min-width: 250px; }
+.footer-hizmetler ul { list-style: none; }
+.footer-hizmetler ul li { font-size: 0.95rem; line-height: 2; opacity: 0.9; }
+
+.footer-info { flex: 1; text-align: right; min-width: 200px; }
+
+/* Tıklanabilir Telefon Numarası Stili */
+.footer-tel-link {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+.footer-tel-link:hover {
+    color: #f0610e;
 }
 
-.footer-hizmetler ul {
-    list-style: none;
-}
-
-.footer-hizmetler ul li {
-    font-size: 0.95rem;
-    line-height: 2;
-    opacity: 0.9;
-}
-
-/* İletişim Bölümü */
-.footer-info {
-    flex: 1;
-    text-align: right;
-    min-width: 200px;
-}
-
-/* Mobilde Üst Üste Binme Düzenlemesi */
+/* --- MOBİL UYUMLULUK --- */
 @media (max-width: 768px) {
-    .footer-flex-alt {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-    .footer-info {
-        text-align: center;
-    }
-    .footer-kvkk-zone, .footer-hizmetler, .footer-info {
-        flex: none;
-        width: 100%;
-    }
-}
-
-/* Mobil Düzenleme */
-@media (max-width: 768px) {
+    .header-flex, .header-right { flex-direction: column; text-align: center; gap: 10px; }
+    .modal-content { margin: 20% auto; width: 95%; }
+    
     .footer-flex-alt {
         flex-direction: column;
         align-items: center;
         text-align: center;
         gap: 35px;
     }
-    .footer-hizmetler ul li {
-        text-align: center;
-    }
-    .footer-info {
-        text-align: center;
-    }
-}
-
-/* --- MOBİL --- */
-@media (max-width: 768px) {
-    .header-flex, .header-right { flex-direction: column; text-align: center; gap: 10px; }
-    .modal-content { margin: 20% auto; }
-    .footer-flex-alt { flex-direction: column; text-align: center; gap: 30px; }
     .footer-info { text-align: center; }
-    
+    .footer-kvkk-zone, .footer-hizmetler, .footer-info { flex: none; width: 100%; }
+
     /* Mobilde metinleri gizle, sadece ikon kalsın */
     .tg-text { display: none; }
     .tg-btn, .wa-btn { padding: 12px; border-radius: 50%; }
