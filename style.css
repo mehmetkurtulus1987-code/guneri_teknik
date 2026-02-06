@@ -81,13 +81,71 @@ header { background: #1a2a6c; color: white; padding: 15px 0; position: sticky; t
 .call, .cta-header { background: #f0610e; color: white; }
 .close-btn { margin-top: 30px; padding: 10px 30px; background: #1a2a6c; color: white; border-radius: 5px; border: none; cursor: pointer; }
 
-/* --- FOOTER --- */
-footer { background: #1a2a6c; color: white; text-align: center; padding: 50px 0; }
-.footer-flex-alt { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; text-align: left; }
-.footer-links { display: flex; flex-direction: column; gap: 10px; }
-.footer-links a { color: #fff; text-decoration: none; font-size: 0.9rem; opacity: 0.8; transition: 0.3s; }
-.footer-links a:hover { opacity: 1; color: #f0610e; padding-left: 5px; }
-.footer-info { text-align: right; }
+/* --- FOOTER YENİ DÜZEN (GÜNCEL) --- */
+.footer-flex-alt {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Başlıklar aynı hizada başlasın */
+    flex-wrap: wrap;
+    text-align: left;
+}
+
+.footer-left-area {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer-hizmetler h4 {
+    font-weight: 700; /* Kalın yazı stili */
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: #f0610e; /* Başlığı vurgulamak için turuncu ton */
+}
+
+.footer-hizmetler ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-hizmetler ul li {
+    font-size: 0.9rem;
+    line-height: 1.8;
+    opacity: 0.9;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.85rem;
+    opacity: 0.7;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    opacity: 1;
+    color: #f0610e;
+}
+
+.footer-info h3 {
+    margin-bottom: 10px;
+}
+
+/* Mobil Düzenleme */
+@media (max-width: 768px) {
+    .footer-flex-alt {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 35px;
+    }
+    .footer-hizmetler ul li {
+        text-align: center;
+    }
+    .footer-info {
+        text-align: center;
+    }
+}
 
 /* --- MOBİL --- */
 @media (max-width: 768px) {
