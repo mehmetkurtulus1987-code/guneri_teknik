@@ -81,54 +81,82 @@ header { background: #1a2a6c; color: white; padding: 15px 0; position: sticky; t
 .call, .cta-header { background: #f0610e; color: white; }
 .close-btn { margin-top: 30px; padding: 10px 30px; background: #1a2a6c; color: white; border-radius: 5px; border: none; cursor: pointer; }
 
-/* --- FOOTER YENİ DÜZEN (GÜNCEL) --- */
+/* --- FOOTER YENİ ÜÇLÜ DÜZEN --- */
+footer { 
+    background: #1a2a6c; 
+    color: white; 
+    padding: 50px 0; 
+    border-top: 3px solid #f0610e;
+}
+
 .footer-flex-alt {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start; /* Başlıklar aynı hizada başlasın */
+    justify-content: space-between; /* Üç sütunu aralıklı yayar */
+    align-items: flex-start;
     flex-wrap: wrap;
-    text-align: left;
+    gap: 30px;
 }
 
-.footer-left-area {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
+/* Başlık Stilleri (Ortak) */
+.footer-kvkk-zone h4, 
 .footer-hizmetler h4 {
-    font-weight: 700; /* Kalın yazı stili */
-    font-size: 1.1rem;
-    margin-bottom: 10px;
-    color: #f0610e; /* Başlığı vurgulamak için turuncu ton */
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #f0610e;
 }
 
-.footer-hizmetler ul {
-    list-style: none;
-    padding: 0;
-}
-
-.footer-hizmetler ul li {
-    font-size: 0.9rem;
-    line-height: 1.8;
-    opacity: 0.9;
+/* KVKK Bölümü */
+.footer-kvkk-zone {
+    flex: 1;
+    min-width: 150px;
 }
 
 .footer-links a {
     color: #fff;
     text-decoration: none;
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     opacity: 0.7;
     transition: 0.3s;
 }
 
-.footer-links a:hover {
-    opacity: 1;
-    color: #f0610e;
+/* Hizmetler Bölümü */
+.footer-hizmetler {
+    flex: 2;
+    min-width: 250px;
 }
 
-.footer-info h3 {
-    margin-bottom: 10px;
+.footer-hizmetler ul {
+    list-style: none;
+}
+
+.footer-hizmetler ul li {
+    font-size: 0.95rem;
+    line-height: 2;
+    opacity: 0.9;
+}
+
+/* İletişim Bölümü */
+.footer-info {
+    flex: 1;
+    text-align: right;
+    min-width: 200px;
+}
+
+/* Mobilde Üst Üste Binme Düzenlemesi */
+@media (max-width: 768px) {
+    .footer-flex-alt {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .footer-info {
+        text-align: center;
+    }
+    .footer-kvkk-zone, .footer-hizmetler, .footer-info {
+        flex: none;
+        width: 100%;
+    }
 }
 
 /* Mobil Düzenleme */
