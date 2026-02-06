@@ -164,6 +164,26 @@ footer {
 
 .footer-info { flex: 1; text-align: right; min-width: 200px; }
 
+/* --- FOOTER ALT BİLGİ SATIRI --- */
+.footer-bottom {
+    background: #152252; /* Footer'dan bir ton daha koyu, derinlik katar */
+    color: rgba(255, 255, 255, 0.7);
+    padding: 20px 0;
+    text-align: center;
+    font-size: 0.8rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-bottom a {
+    color: #f0610e;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.footer-bottom a:hover {
+    color: white;
+}
+
 /* Tıklanabilir Telefon Numarası Stili */
 .footer-tel-link {
     color: white;
@@ -188,6 +208,14 @@ footer {
     }
     .footer-info { text-align: center; }
     .footer-kvkk-zone, .footer-hizmetler, .footer-info { flex: none; width: 100%; }
+
+    /* Mobil için metin sığdırma */
+@media (max-width: 768px) {
+    .footer-bottom {
+        padding: 25px 15px;
+        line-height: 1.5;
+    }
+}
 
     /* Mobilde metinleri gizle, sadece ikon kalsın */
     .tg-text { display: none; }
