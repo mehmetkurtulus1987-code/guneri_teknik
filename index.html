@@ -32,7 +32,7 @@
                         <li><a href="#iletisim">İletişim</a></li>
                     </ul>
                 </nav>
-                </div>
+            </div>
         </div>
     </header>
 
@@ -55,7 +55,7 @@
                     <h4 class="model-link" onclick="openModal('Maktek Omega Elektrikli', '...')">Omega LCD Elektrikli Kombi ▸</h4>
                     <p>Elektrikli Kombi</p>
                 </div>
-                </div>
+            </div>
             <button onclick="toggleSection('maktek-ozel')" class="close-btn">Paneli Kapat</button>
         </div>
     </section>
@@ -71,7 +71,7 @@
                     <h4 class="model-link" onclick="openModal('Sanica Kral Yoğuşmalı', '...')">Kral Yoğuşmalı ▸</h4>
                     <p>Tam Yoğuşmalı Kombi</p>
                 </div>
-                </div>
+            </div>
             <button onclick="toggleSection('sanica-ozel')" class="close-btn">Paneli Kapat</button>
         </div>
     </section>
@@ -96,18 +96,14 @@
     </div>
 
     <div class="action-float-container">
-        <div class="whatsapp-float">
-            <a href="https://wa.me/905376183344" target="_blank" class="wa-btn">
-                <span class="tg-text">Whatsapp Destek Talebi / Arıza Bildirimi</span>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-            </a>
-        </div>
-        <div class="telegram-float">
-            <a href="https://t.me/Guneriteknik_bot" target="_blank" class="tg-btn">
-                <span class="tg-text">Telegram Bot Yardımıyla Arıza Tespiti</span>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram">
-            </a>
-        </div>
+        <a href="https://wa.me/905376183344" target="_blank" class="wa-btn">
+            <span class="tg-text">Whatsapp Destek / Arıza Bildirimi</span>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+        </a>
+        <a href="https://t.me/Guneriteknik_bot" target="_blank" class="tg-btn">
+            <span class="tg-text">Telegram Bot ile Arıza Tespiti</span>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram">
+        </a>
     </div>
 
     <section class="hero">
@@ -118,55 +114,52 @@
     </section>
 
     <section id="kvkk-paneli" class="toggle-section" style="display: none; background: #fff; border-top: 2px solid #eee;">
-        <div class="container">
-            <h3>KVKK Aydınlatma Metni</h3>
-            <p>Güneri Teknik olarak kişisel verilerinizin güvenliğine önem veriyoruz...</p>
-            <button onclick="toggleSection('kvkk-paneli')" class="close-btn">Kapat</button>
-        </div>
-    </section>
-
-    <section id="hizmetler-paneli" class="toggle-section" style="display: none; background: #f1f1f1; border-top: 2px solid #eee;">
-        <div class="container">
-            <h3>Hizmetlerimiz</h3>
-            <ul style="text-align: left; display: inline-block; margin-top: 15px; line-height: 2;">
-                <li>✅ Kombi Arıza ve Tamir Servisi</li>
-                <li>✅ Yıllık Periyodik Kombi Bakımı</li>
-                <li>✅ Petek Temizliği ve Tesisat Bakımı</li>
-                <li>✅ Oda Termostatı Montajı</li>
-                <li>✅ Kart Tamiri ve Parça Değişimi</li>
+        <div class="container" style="max-width: 800px; text-align: left; line-height: 1.6;">
+            <h2 style="color: #1a2a6c; margin-bottom: 20px; border-bottom: 2px solid #f0610e; display: inline-block; padding-bottom: 5px;">KVKK Aydınlatma Metni</h2>
+            <p style="font-weight: 600; margin-bottom: 15px;">Güneri Teknik olarak kişisel verilerinizin güvenliğine önem veriyoruz...</p>
+            <p style="margin-bottom: 15px;">6698 sayılı Kişisel Verilerin Korunması Kanunu (“KVKK”) uyarınca, veri sorumlusu sıfatıyla, kişisel verilerinizin güvenliğine ve gizliliğine azami hassasiyet göstermekteyiz. Bu metin, web sitemiz, WhatsApp destek hattımız veya telefon kanalıyla tarafımıza ilettiğiniz verilerin işlenme amaçlarını açıklamak üzere hazırlanmıştır.</p>
+            <h4 style="color: #f0610e; margin: 20px 0 10px 0;">1. İşlenen Kişisel Verileriniz</h4>
+            <ul style="margin-left: 20px; margin-bottom: 15px;">
+                <li><strong>Kimlik Bilgileri:</strong> Adınız ve soyadınız.</li>
+                <li><strong>İletişim Bilgileri:</strong> Telefon numaranız, servis verilecek açık adresiniz.</li>
+                <li><strong>Cihaz Bilgileri:</strong> Kombi markası/modeli, arıza geçmişi ve yapılan işlemler.</li>
             </ul>
-            <br>
-            <button onclick="toggleSection('hizmetler-paneli')" class="close-btn">Kapat</button>
+            <h4 style="color: #f0610e; margin: 20px 0 10px 0;">2. İşlenme Amaçları</h4>
+            <p>Verileriniz; servis kaydı oluşturma, hangi müşteriye hangi işlemin yapıldığını takip etme ve yıllık bakım zamanlarını hatırlatma amacıyla işlenmektedir.</p>
+            <h4 style="color: #f0610e; margin: 20px 0 10px 0;">3. Veri Aktarımı ve Haklarınız</h4>
+            <p>Verileriniz yasal zorunluluklar dışında üçüncü taraflarla paylaşılmaz. Dilediğiniz zaman verilerinizin silinmesini talep edebilirsiniz.</p>
+            <button onclick="toggleSection('kvkk-paneli')" class="close-btn">Anladım, Kapat</button>
         </div>
     </section>
 
     <footer id="iletisim">
-    <div class="container footer-flex-alt">
-        <div class="footer-kvkk-zone">
-            <h4>Yasal</h4>
-            <div class="footer-links">
-                <a href="javascript:void(0)" onclick="toggleSection('kvkk-paneli')">KVKK Politikaları</a>
+        <div class="container footer-flex-alt">
+            <div class="footer-kvkk-zone">
+                <h4>Yasal</h4>
+                <div class="footer-links">
+                    <a href="javascript:void(0)" onclick="toggleSection('kvkk-paneli')">KVKK Politikaları</a>
+                </div>
+            </div>
+
+            <div class="footer-hizmetler">
+                <h4>Hizmetlerimiz</h4>
+                <ul>
+                    <li>✅ Kombi Arıza ve Tamir Servisi</li>
+                    <li>✅ Yıllık Periyodik Kombi Bakımı</li>
+                    <li>✅ Petek Temizliği ve Tesisat Bakımı</li>
+                    <li>✅ Oda Termostatı Montajı</li>
+                    <li>✅ Kart Tamiri ve Parça Değişimi</li>
+                </ul>
+            </div>
+
+            <div class="footer-info">
+                <h3>GÜNERİ TEKNİK</h3>
+                <p>📍 Menemen - Aliağa - Foça</p>
+                <p>📞 <a href="tel:+905376183344" class="footer-tel-link">0537 618 33 44</a></p>
             </div>
         </div>
+    </footer>
 
-        <div class="footer-hizmetler">
-            <h4>Hizmetlerimiz</h4>
-            <ul>
-                <li>✅ Kombi Arıza ve Tamir Servisi</li>
-                <li>✅ Yıllık Periyodik Kombi Bakımı</li>
-                <li>✅ Petek Temizliği ve Tesisat Bakımı</li>
-                <li>✅ Oda Termostatı Montajı</li>
-                <li>✅ Kart Tamiri ve Parça Değişimi</li>
-            </ul>
-        </div>
-
-        <div class="footer-info">
-            <h3>GÜNERİ TEKNİK</h3>
-            <p>📍 Menemen - Aliağa - Foça</p>
-            <p>📞 <a href="tel:+905376183344" class="footer-tel-link">0537 618 33 44</a></p>
-        </div>
-    </div>
-</footer>
     <script>
         function toggleSection(sectionId) {
             const sections = document.querySelectorAll('.toggle-section');
