@@ -164,6 +164,43 @@ footer { background: #1a2a6c; color: white; padding: 50px 0; border-top: 3px sol
 .footer-bottom a { color: #f0610e; text-decoration: underline; font-weight: 600; }
 .footer-bottom a:hover { color: white; }
 
+/* Yol Tarifi Linki Stili */
+.direction-wrapper {
+    margin-top: 8px; /* Telefon numarası ile arasındaki boşluk */
+}
+
+.nav-link {
+    color: #f0610e; /* Marka turuncun */
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: 0.3s;
+    display: inline-flex;
+    align-items: center;
+}
+
+.nav-link::before {
+    content: '📍'; /* Başına küçük bir ikon ekler */
+    margin-right: 5px;
+}
+
+.nav-link:hover {
+    color: white; /* Üzerine gelince beyaz olur (arka plan koyuysa güzel durur) */
+    text-decoration: underline;
+}
+
+/* Footer info sağa yaslıysa yazıyı hizalar */
+.footer-info .direction-wrapper {
+    display: flex;
+    justify-content: flex-end;
+}
+
+@media (max-width: 768px) {
+    .footer-info .direction-wrapper {
+        justify-content: center; /* Mobilde ortalar */
+    }
+}
+
 /* --- MOBİL UYUMLULUK --- */
 @media (max-width: 768px) {
     .header-flex, .header-right { flex-direction: column; text-align: center; gap: 10px; }
