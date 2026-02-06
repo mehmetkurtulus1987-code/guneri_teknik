@@ -127,11 +127,11 @@
             <h4 style="color: #f0610e; margin: 20px 0 10px 0;">2. İşlenme Amaçları</h4>
             <p>Verileriniz; servis kaydı oluşturma, hangi müşteriye hangi işlemin yapıldığını takip etme, yıllık bakım zamanlarını hatırlatma ve yasal yükümlülükler amacıyla işlenmektedir.</p>
             <h4 style="color: #f0610e; margin: 20px 0 10px 0;">3. Veri Aktarımı ve Haklarınız</h4>
-            <p>Kişisel verileriniz, yasal zorunluluklar (vergi denetimleri, adli makamlar vb.) haricinde, rızanız olmaksızın üçüncü şahıslara veya kurumlara ticari amaçla asla aktarılmamaktadır. Dilediğiniz zaman verilerinizin silinmesini talep edebilirsiniz.</p>
+            <p>Kişisel verileriniz, yasal zorunluluklar haricinde, rızanız olmaksızın üçüncü şahıslara veya kurumlara ticari amaçla asla aktarılmamaktadır. Dilediğiniz zaman verilerinizin silinmesini talep edebilirsiniz.</p>
             <h4 style="color: #f0610e; margin: 20px 0 10px 0;">4. Veri Toplamanın Yöntemi ve Hukuki Sebebi</h4>
-            <p>Verileriniz; web sitemizdeki Telegram/WhatsApp butonları, telefon aramaları veya yerinde servis formları aracılığıyla, "bir sözleşmenin kurulması veya ifası için zorunlu olması" ve "veri sorumlusunun meşru menfaatleri" hukuki sebeplerine dayalı olarak toplanmaktadır.</p>
+            <p>Verileriniz; "bir sözleşmenin kurulması veya ifası için zorunlu olması" ve "veri sorumlusunun meşru menfaatleri" hukuki sebeplerine dayalı olarak toplanmaktadır.</p>
             <h4 style="color: #f0610e; margin: 20px 0 10px 0;">5. Haklarınız (KVKK Madde 11)</h4>
-            <p>Dilediğiniz zaman tarafımıza başvurarak; kişisel verilerinizin işlenip işlenmediğini öğrenme, işlenmişse bilgi talep etme, yanlış işlenmişse düzeltilmesini isteme ve verilerinizin silinmesini talep etme hakkına sahipsiniz.</p>
+            <p>Dilediğiniz zaman tarafımıza başvurarak; kişisel verilerinizin silinmesini talep etme hakkına sahipsiniz.</p>
             <button onclick="toggleSection('kvkk-paneli')" class="close-btn">Anladım, Kapat</button>
         </div>
     </section>
@@ -162,15 +162,30 @@
                 <p>📞 <a href="tel:+905376183344" class="footer-tel-link">0537 618 33 44</a></p>
             </div>
         </div>
-        
     </footer>
-        <div class="footer-bottom">
+
+    <div class="footer-bottom">
         <div class="container">
             <p>WhatsApp veya Telegram üzerinden bizimle iletişime geçerek <a href="javascript:void(0)" onclick="toggleSection('kvkk-paneli')">KVKK Aydınlatma Metni</a> çerçevesinde verilerinizin işlenmesini kabul etmiş sayılırsınız.</p>
             <p style="margin-top: 8px; font-size: 0.75rem; opacity: 0.5;">© 2024 Güneri Teknik. Tüm Hakları Saklıdır.</p>
         </div>
     </div>
+
     <script>
+        // Dropdown kararlılığı için tıklandığında aç/kapat özelliği
+        document.querySelector('.dropbtn').addEventListener('click', function(e) {
+            e.stopPropagation();
+            const parent = this.parentElement;
+            parent.classList.toggle('active');
+        });
+
+        // Sayfada başka bir yere tıklandığında dropdown'ı kapat
+        window.addEventListener('click', function(e) {
+            if (!e.target.matches('.dropbtn')) {
+                document.querySelectorAll('.dropdown').forEach(d => d.classList.remove('active'));
+            }
+        });
+
         function toggleSection(sectionId) {
             const sections = document.querySelectorAll('.toggle-section');
             const target = document.getElementById(sectionId);
@@ -181,6 +196,8 @@
             } else {
                 target.style.display = "none";
             }
+            // Section açıldığında dropdown'ı kapat
+            document.querySelectorAll('.dropdown').forEach(d => d.classList.remove('active'));
         }
 
         function openModal(title, features) {
@@ -195,6 +212,7 @@
             document.getElementById('productModal').style.display = "none";
         }
 
+        // Modal dışına tıklandığında kapat
         window.onclick = function(event) {
             const modal = document.getElementById('productModal');
             if (event.target == modal) { closeModal(); }
