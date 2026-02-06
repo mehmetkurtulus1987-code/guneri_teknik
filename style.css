@@ -216,6 +216,23 @@ footer {
     box-shadow: 0 6px 20px rgba(240, 97, 14, 0.5);
     background: linear-gradient(135deg, #ff7221 0%, #f0610e 100%);
 }
+/* --- LOGO AYARLARI --- */
+.site-logo {
+    height: 50px; /* Logonun yüksekliği */
+    width: auto;  /* Orantıyı bozmaz */
+    border-radius: 4px; /* Köşeleri hafif yumuşatır */
+    object-fit: contain;
+}
+
+/* Mobilde logonun çok büyük kalmaması için */
+@media (max-width: 768px) {
+    .site-logo {
+        height: 40px;
+    }
+    .logo-area h1 {
+        font-size: 1.2rem;
+    }
+}
 
 /* --- MOBİL UYUMLULUK --- */
 @media (max-width: 768px) {
