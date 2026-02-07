@@ -247,56 +247,61 @@ footer {
     .tg-text { display: none; }
     .tg-btn, .wa-btn { padding: 12px; border-radius: 50%; }
 }
-/* --- NEDEN BİZ TASARIMI --- */
+/* --- NEDEN BİZ TASARIMI (RENKLİ GÜNCELLEME) --- */
 .why-choose-us {
-    background-color: #ffffff;
-    padding: 50px 0;
+    background-color: #fcfcfc; /* Saf beyaz yerine çok hafif gri ton */
+    padding: 60px 0;
+    border-top: 1px solid #eee;
     border-bottom: 1px solid #eee;
 }
 
 .why-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 30px;
     text-align: center;
 }
 
 .why-item {
-    padding: 20px;
+    padding: 30px 20px;
+    background: white; /* Kartların kendisi beyaz kalsın */
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.03); /* Çok hafif bir gölge */
     transition: 0.3s;
-    border-radius: 12px;
 }
 
 .why-item:hover {
-    transform: translateY(-5px);
-    background: #fdfdfd;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
 }
 
 .why-icon {
-    font-size: 2.5rem;
-    margin-bottom: 15px;
+    font-size: 2.2rem;
+    background: rgba(240, 97, 14, 0.1); /* Turuncu şeffaf arka plan */
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    margin: 0 auto 20px;
+    border-radius: 50%; /* Yuvarlak ikon alanı */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .why-item h4 {
-    color: #1a2a6c;
-    margin-bottom: 10px;
-    font-size: 1.1rem;
+    color: #1a2a6c; /* Header laciverti */
+    margin-bottom: 15px;
+    font-size: 1.2rem;
     font-weight: 700;
 }
 
 .why-item p {
-    color: #666;
-    font-size: 0.9rem;
-    line-height: 1.5;
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.6;
 }
 
-/* Mobil için ikon boyutunu düzenleme */
+/* Mobilde biraz daha dar alan */
 @media (max-width: 768px) {
-    .why-choose-us {
-        padding: 30px 0;
-    }
-    .why-grid {
-        gap: 15px;
-    }
+    .why-choose-us { padding: 40px 0; }
 }
