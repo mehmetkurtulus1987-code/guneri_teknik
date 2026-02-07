@@ -247,3 +247,56 @@ footer {
     .tg-text { display: none; }
     .tg-btn, .wa-btn { padding: 12px; border-radius: 50%; }
 }
+/* --- NEDEN BİZ TASARIMI --- */
+.why-choose-us {
+    background-color: #ffffff;
+    padding: 50px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    text-align: center;
+}
+
+.why-item {
+    padding: 20px;
+    transition: 0.3s;
+    border-radius: 12px;
+}
+
+.why-item:hover {
+    transform: translateY(-5px);
+    background: #fdfdfd;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.why-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.why-item h4 {
+    color: #1a2a6c;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.why-item p {
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* Mobil için ikon boyutunu düzenleme */
+@media (max-width: 768px) {
+    .why-choose-us {
+        padding: 30px 0;
+    }
+    .why-grid {
+        gap: 15px;
+    }
+}
