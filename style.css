@@ -264,7 +264,10 @@ footer {
 
 .why-item {
     padding: 30px 20px;
-    background: white; /* Kartların kendisi beyaz kalsın */
+    background-image:url("https://hizliresim.com/c62r54c"); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     border-radius: 15px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.03); /* Çok hafif bir gölge */
     transition: 0.3s;
