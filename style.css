@@ -250,6 +250,10 @@ footer {
 /* --- NEDEN BİZ TASARIMI (RENKLİ GÜNCELLEME) --- */
 .why-choose-us {
     background-color: #fcfcfc; /* Saf beyaz yerine çok hafif gri ton */
+    background-image:url("https://hizliresim.com/c62r54c");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     padding: 60px 0;
     border-top: 1px solid #eee;
     border-bottom: 1px solid #eee;
