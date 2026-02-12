@@ -15,9 +15,9 @@ body {
 .container { width: 90%; max-width: 1200px; margin: auto; }
 
 /* --- HEADER --- */
-header { background: #1a2a6c; color: white; padding: 12px 0; position: sticky; top: 0; z-index: 2000; }
-.header-flex { display: flex; justify-content: space-between; align-items: center; }
-.header-right { display: flex; align-items: center; gap: 20px; }
+header nav { background: #1a2a6c; color: white; padding: 12px 0; position: sticky; top: 0; z-index: 2000; }
+.header nav-flex { display: flex; justify-content: space-between; align-items: center; }
+.header nav-right { display: flex; align-items: center; gap: 20px; }
 
 .main-nav ul { 
     list-style: none; 
