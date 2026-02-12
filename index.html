@@ -1,298 +1,48 @@
-
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Güneri Teknik | Menemen-Foça-Aliağa Kombi Arıza Servisi</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://image2url.com/r2/default/images/1770467499425-daf2095f-12c4-4add-a35a-f3b998b96870.jpg" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Güneri Teknik | Yetkili Kombi Servisi</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-    <div class="container header-flex">
-        <div class="logo" style="display: flex; align-items: center; gap: 10px;">
-            <img src="https://image2url.com/r2/default/images/1770486935511-1e9a1b09-0c51-48b1-b4b7-b11894935bfb.png" alt="Güneri Teknik Logo" class="site-logo">
-            <h1 style="margin: 0;">GÜNERİ <span>TEKNİK</span></h1>
-        </div>
-        
-        <div class="header-right">
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="#" onclick="toggleSection('anasayfa')">Anasayfa</a></li>
-                    <li><a href="javascript:void(0)" onclick="toggleSection('hakkimizda')">Hakkımızda</a></li>
-                    <li class="dropdown">
-                        <a href="javascript:void(0)" class="dropbtn">Ürünlerimiz</a>
-                        <div class="dropdown-content">
-                            <a href="javascript:void(0)" onclick="toggleSection('maktek-ozel')">MAKTEK</a>
-                            <a href="javascript:void(0)" onclick="toggleSection('sanica-ozel')">SANICA</a>
-                            <a href="javascript:void(0)" onclick="toggleSection('markalar-bolumu')">DİZAYN</a>
-                            <a href="javascript:void(0)" onclick="toggleSection('markalar-bolumu')">ARISTON</a>
-                            <a href="javascript:void(0)" onclick="toggleSection('markalar-bolumu')">HEXEL</a>
-                        </div>
-                    </li>
-                    <li class="dropdown">
-                        <a href="javascript:void(0)" class="dropbtn">Yedek Parça</a>
-                        <div class="dropdown-content">
-                            <a href="javascript:void(0)" onclick="toggleSection('maktek-yed-par')">MAKTEK</a>
-                            <a href="javascript:void(0)" onclick="toggleSection('sanica-yed-par')">SANICA</a>
-                            <a href="javascript:void(0)" onclick="toggleSection('markalar-yed-par')">DİZAYN</a>
-                            <a href="javascript:void(0)" onclick="toggleSection('markalar-yed-par')">ARISTON</a>
-                            <a href="javascript:void(0)" onclick="toggleSection('markalar-yed-par')">HEXEL</a>
-                        </div>
-                    <li><a href="#iletisim">İletişim</a></li>
-                </ul>
-            </nav>
-        </div>
-    </div>
+<header>
+<nav>
+<ul class="menu">
+<li><a href="index.html">Anasayfa</a></li>
+<li><a href="hakkimizda.html">Hakkımızda</a></li>
+<li><a href="urunler.html">Ürünlerimiz</a></li>
+<li><a href="yedekparca.html">Yedek Parça</a></li>
+<li><a href="index.html#iletisim">İletişim</a></li>
+</ul>
+</nav>
 </header>
 
-    <section id="hakkimizda" class="toggle-section" style="display: none;">
-        <div class="container">
-            <h3>Hakkımızda</h3>
-            <p>Güneri Teknik olarak, İzmir'in kuzey aksında (Menemen, Aliağa, Foça) yılların verdiği tecrübe ile kombi, Kömürlü/Mazotlu Kazan arıza, onarım ve parça değişimi konularında profesyonel hizmet veriyoruz.</p>
-            <button onclick="toggleSection('hakkimizda')" class="close-btn">Kapat</button>
-        </div>
-    </section>
+<main>
 
-    <section id="maktek-ozel" class="toggle-section maktek-panel" style="display: none;">
-        <div class="container">
-            <h2 class="section-title">Maktek Ürün Grupları</h2>
-            <div class="maktek-grid">
-                <div class="product-card">
-                    <div class="img-box">
-                        <img src="https://maktek.com.tr/tr/wp-content/uploads/2023/09/omegalcd1.jpg" alt="Omega" class="product-img">
-                    </div>
-                    <h4 class="model-link" onclick="openModal('Maktek Omega Elektrikli', '...')">Omega LCD Elektrikli Kombi ▸</h4>
-                    <p>Elektrikli Kombi</p>
-                </div>
-            </div>
-            <button onclick="toggleSection('maktek-ozel')" class="close-btn">Paneli Kapat</button>
-        </div>
-    </section>
+<section class="hero">
+<h1>Güneri Teknik Yetkili Servis</h1>
+<p>Menemen, Aliağa ve Foça bölgesinde profesyonel kombi bakım ve arıza servisi.</p>
+</section>
 
-    <section id="sanica-ozel" class="toggle-section maktek-panel" style="display: none;">
-        <div class="container">
-            <h2 class="section-title">Sanica Ürün Grupları</h2>
-            <div class="maktek-grid">
-                <div class="product-card">
-                    <div class="img-box">
-                        <img src="https://www.sanicaisi.com.tr/wp-content/uploads/2019/07/kral-kombi-1024x995.jpg" alt="Kral" class="product-img">
-                    </div>
-                    <h4 class="model-link" onclick="openModal('Sanica Kral Yoğuşmalı', '...')">Kral Yoğuşmalı ▸</h4>
-                    <p>Tam Yoğuşmalı Kombi</p>
-                </div>
-            </div>
-            <button onclick="toggleSection('sanica-ozel')" class="close-btn">Paneli Kapat</button>
-        </div>
-    </section>
+<section>
+<h2>Neden Bizi Tercih Etmelisiniz?</h2>
+<p>✔ Orijinal yedek parça</p>
+<p>✔ Hızlı servis</p>
+<p>✔ Garantili işlem</p>
+</section>
 
-    <section id="markalar-bolumu" class="toggle-section brands-bg" style="display: none;">
-        <div class="container">
-            <h3>Hizmet Verdiğimiz Markalar</h3>
-            <div class="brand-list">
-                <span>SANICA</span><span>DİZAYN</span><span>ARISTON</span><span>HEXEL</span>
-            </div>
-            <button onclick="toggleSection('markalar-bolumu')" class="close-btn">Kapat</button>
-        </div>
-    </section>
-    <section id="maktek-yed-par" class="toggle-section maktek-panel" style="display: none;">
-        <div class="container">
-            <h2 class="section-title">Maktek Ürün Grupları</h2>
-            <div class="maktek-grid">
-                <div class="product-card">
-                    <div class="img-box">
-                        <img src="https://www.oneyedekparca.com/image/cache/data/kombi/vana-motoru/maktek-condense-kombi-uc-yollu-vana-motoru-500x500.jpg" alt="Omega" class="product-img">
-                    </div>
-                    <h4 class="model-link" onclick="openModal('Maktek Condense', '...')">Condense 3 yollu Vana Motoru ▸</h4>
-                    <p>Doğalgazlı Kombi</p>
-                </div>
-            </div>
-            <button onclick="toggleSection('maktek-yed-par')" class="close-btn">Paneli Kapat</button>
-        </div>
-    </section>
+</main>
 
-    <section id="sanica-yed-par" class="toggle-section maktek-panel" style="display: none;">
-        <div class="container">
-            <h2 class="section-title">Sanica Ürün Grupları</h2>
-            <div class="maktek-grid">
-                <div class="product-card">
-                    <div class="img-box">
-                        <img src="https://www.sanicaisi.com.tr/wp-content/uploads/2019/07/kral-kombi-1024x995.jpg" alt="Kral" class="product-img">
-                    </div>
-                    <h4 class="model-link" onclick="openModal('Sanica Kral Yoğuşmalı', '...')">Kral Yoğuşmalı ▸</h4>
-                    <p>Tam Yoğuşmalı Kombi</p>
-                </div>
-            </div>
-            <button onclick="toggleSection('sanica-yed-par')" class="close-btn">Paneli Kapat</button>
-        </div>
-    </section>
+<footer id="iletisim">
+<h2>İletişim</h2>
+<p>📍 Menemen - Aliağa - Foça</p>
+<p>📞 0232 831 44 14</p>
+<p>📱 0537 618 33 44</p>
+<p>✉ info@guneriteknik.com</p>
+</footer>
 
-    <div id="productModal" class="modal">
-        <div class="modal-content">
-            <span class="close-modal" onclick="closeModal()">&times;</span>
-            <h2 id="modalTitle">Ürün Adı</h2>
-            <div id="modalBody">Özellikler yükleniyor...</div>
-            <a id="modalWaBtn" href="#" target="_blank" class="btn whatsapp" style="display:block; margin-top:20px;">Bu Ürün Hakkında Fiyat Al</a>
-        </div>
-    </div>
-
-    <div class="action-float-container">
-        <a href="https://wa.me/905376183344" target="_blank" class="wa-btn">
-            <span class="tg-text">Whatsapp Destek / Arıza Bildirimi</span>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-        </a>
-        <a href="https://t.me/Guneriteknik_bot" target="_blank" class="tg-btn">
-            <span class="tg-text">Telegram Bot ile Arıza Tespiti</span>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram">
-        </a>
-    </div>
-
-    <section class="hero">
-        <div class="container">
-            <h2>Kombiniz mi Arızalandı?</h2>
-            <p>Menemen, Aliağa ve Foça bölgesinde profesyonel teknik servis.</p>
-            <p>Isıtmak bizim işimiz, arayın gerisini bize bırakın.</p>
-        </div>
-    </section>
-    
-    <section id="kvkk-paneli" class="toggle-section" style="display: none; background: #fff; border-top: 2px solid #eee;">
-        <div class="container" style="max-width: 800px; text-align: left; line-height: 1.6;">
-            <h2 style="color: #1a2a6c; margin-bottom: 20px; border-bottom: 2px solid #f0610e; display: inline-block; padding-bottom: 5px;">KVKK Aydınlatma Metni</h2>
-            <p style="font-weight: 600; margin-bottom: 15px;">Güneri Teknik olarak kişisel verilerinizin güvenliğine önem veriyoruz...</p>
-            <p style="margin-bottom: 15px;">6698 sayılı Kişisel Verilerin Korunması Kanunu (“KVKK”) uyarınca, veri sorumlusu sıfatıyla, kişisel verilerinizin güvenliğine ve gizliliğine azami hassasiyet göstermekteyiz. Bu metin, web sitemiz, WhatsApp destek hattımız, Telegram Arıza Tespit hattımız veya telefon kanalıyla tarafımıza ilettiğiniz verilerin işlenme amaçlarını açıklamak üzere hazırlanmıştır.</p>
-            <h4 style="color: #f0610e; margin: 20px 0 10px 0;">1. İşlenen Kişisel Verileriniz</h4>
-            <ul style="margin-left: 20px; margin-bottom: 15px;">
-                <li><strong>Kimlik Bilgileri:</strong> Adınız ve soyadınız.</li>
-                <li><strong>İletişim Bilgileri:</strong> Telefon numaranız, servis verilecek açık adresiniz.</li>
-                <li><strong>Cihaz Bilgileri:</strong> Kombi markası/modeli, arıza geçmişi ve yapılan işlemler.</li>
-            </ul>
-            <h4 style="color: #f0610e; margin: 20px 0 10px 0;">2. İşlenme Amaçları</h4>
-            <p>Verileriniz; servis kaydı oluşturma, hangi müşteriye hangi işlemin yapıldığını takip etme, yıllık bakım zamanlarını hatırlatma ve yasal yükümlülükler amacıyla işlenmektedir.</p>
-            <h4 style="color: #f0610e; margin: 20px 0 10px 0;">3. Veri Aktarımı ve Haklarınız</h4>
-            <p>Kişisel verileriniz, yasal zorunluluklar haricinde, rızanız olmaksızın üçüncü şahıslara veya kurumlara ticari amaçla asla aktarılmamaktadır. Dilediğiniz zaman verilerinizin silinmesini talep edebilirsiniz.</p>
-            <h4 style="color: #f0610e; margin: 20px 0 10px 0;">4. Veri Toplamanın Yöntemi ve Hukuki Sebebi</h4>
-            <p>Verileriniz; "bir sözleşmenin kurulması veya ifası için zorunlu olması" ve "veri sorumlusunun meşru menfaatleri" hukuki sebeplerine dayalı olarak toplanmaktadır.</p>
-            <h4 style="color: #f0610e; margin: 20px 0 10px 0;">5. Haklarınız (KVKK Madde 11)</h4>
-            <p>Dilediğiniz zaman tarafımıza başvurarak; kişisel verilerinizin silinmesini talep etme hakkına sahipsiniz.</p>
-            <button onclick="toggleSection('kvkk-paneli')" class="close-btn">Anladım, Kapat</button>
-        </div>
-    </section>
-    <section class="why-choose-us">
-     <div class="container">
-        <h2 class="section-title">Neden Güneri Teknik?</h2>
-     <div class="why-grid">
-        <div class="why-item">
-            <div class="why-icon">🛡️</div>
-            <h4>Orijinal Yedek Parça</h4>
-            <p>Cihazlarınızın ömrünü uzatmak için sadece orijinal parçalar kullanıyoruz.</p>
-        </div>
-        
-        <div class="why-item">
-            <div class="why-icon">⏱️</div>
-            <h4>Hızlı Servis</h4>
-            <p>Menemen, Aliağa ve Foça bölgelerine mobil ekiplerimizle ulaşıyoruz.</p>
-        </div>
-        
-        <div class="why-item">
-            <div class="why-icon">👨‍🔧</div>
-            <h4>Uzman Kadro</h4>
-            <p>Yılların verdiği tecrübe ve teknik eğitimli personelimizle kesin çözüm sunuyoruz. +20 yıllık tecrübe</p>
-        </div>
-        
-        <div class="why-item">
-            <div class="why-icon">💎</div>
-            <h4>Şeffaf Fiyatlandırma</h4>
-            <p>Sürpriz maliyetler çıkarmadan, onayınız dahilinde ekonomik onarım yapıyoruz.</p>
-        </div>
-     </div>
-    </section>
-    <footer id="iletisim">
-        <div class="container footer-flex-alt">
-            <div class="footer-kvkk-zone">
-                <h4>Yasal</h4>
-                <div class="footer-links">
-                    <a href="javascript:void(0)" onclick="toggleSection('kvkk-paneli')">KVKK Politikaları</a>
-                </div>
-            </div>
-
-            <div class="footer-hizmetler">
-                <h4>Hizmetlerimiz</h4>
-                <ul>
-                    <li>✅ Kombi Arıza ve Tamir Servisi</li>
-                    <li>✅ Yıllık Periyodik Kombi Bakımı</li>
-                    <li>✅ Petek Temizliği ve Tesisat Bakımı</li>
-                    <li>✅ Oda Termostatı Montajı</li>
-                    <li>✅ Kart Tamiri ve Parça Değişimi</li>
-                </ul>
-            </div>
-
-            <div class="footer-info">
-                <h3>GÜNERİ TEKNİK</h3>
-                <p>📍 Menemen - Aliağa - Foça</p>
-                <p> 📞 <a href="tel:+902328314414" class="footer-tel-link">0232 831 44 14</a></p>
-                <p> 📱 <a href="tel:+905376183344" class="footer-tel-link">0537 618 33 44</a></p>
-            <div class="direction-wrapper">
-                <p> <a href="https://tinyurl.com/Guneriteknik" target="_blank" class="nav-button">🚙  Yol Tarifi Al - Haritaları Aç</a></p>
-            </div>
-            </div>
-        </div>
-    </footer>
-
-    <div class="footer-bottom">
-        <div class="container">
-            <p>WhatsApp veya Telegram üzerinden bizimle iletişime geçerek <a href="javascript:void(0)" onclick="toggleSection('kvkk-paneli')">KVKK Aydınlatma Metni</a> çerçevesinde verilerinizin işlenmesini kabul etmiş sayılırsınız.</p>
-            <p style="margin-top: 8px; font-size: 0.75rem; opacity: 0.5;">© 2024 Güneri Teknik. Tüm Hakları Saklıdır.</p>
-        </div>
-    </div>
-
-    <script>
-        // Dropdown kararlılığı için tıklandığında aç/kapat özelliği
-        document.querySelector('.dropbtn').addEventListener('click', function(e) {
-            e.stopPropagation();
-            const parent = this.parentElement;
-            parent.classList.toggle('active');
-        });
-
-        // Sayfada başka bir yere tıklandığında dropdown'ı kapat
-        window.addEventListener('click', function(e) {
-            if (!e.target.matches('.dropbtn')) {
-                document.querySelectorAll('.dropdown').forEach(d => d.classList.remove('active'));
-            }
-        });
-
-        function toggleSection(sectionId) {
-            const sections = document.querySelectorAll('.toggle-section');
-            const target = document.getElementById(sectionId);
-            if (target.style.display === "none" || target.style.display === "") {
-                sections.forEach(s => s.style.display = "none");
-                target.style.display = "block";
-                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            } else {
-                target.style.display = "none";
-            }
-            // Section açıldığında dropdown'ı kapat
-            document.querySelectorAll('.dropdown').forEach(d => d.classList.remove('active'));
-        }
-
-        function openModal(title, features) {
-            document.getElementById('modalTitle').innerText = title;
-            document.getElementById('modalBody').innerHTML = features;
-            const waMsg = encodeURIComponent("Merhaba, " + title + " ürünü hakkında detaylı bilgi ve fiyat alabilir miyim?");
-            document.getElementById('modalWaBtn').href = "https://wa.me/905376183344?text=" + waMsg;
-            document.getElementById('productModal').style.display = "block";
-        }
-
-        function closeModal() {
-            document.getElementById('productModal').style.display = "none";
-        }
-
-        // Modal dışına tıklandığında kapat
-        window.onclick = function(event) {
-            const modal = document.getElementById('productModal');
-            if (event.target == modal) { closeModal(); }
-        }
-    </script>
 </body>
 </html>
